@@ -17,7 +17,11 @@ and project-plan template against `SHA256SUMS`:
 curl -fsSL https://raw.githubusercontent.com/ontograph/ontocode-cli/main/scripts/install/install.sh | sh
 ```
 
-Pin version `0.4.2` with `--release 0.4.2`.
+Pin an explicit release with `--release`, for example `--release 0.4.2.1`.
+
+Release identity note: GitHub tags, installer inputs, and asset names use the
+human release identity such as `0.4.2.1`, while the CLI reports the
+machine-readable Cargo version such as `0.4.2+1`.
 
 ### Verifying a download
 

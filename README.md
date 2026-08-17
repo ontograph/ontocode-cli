@@ -39,3 +39,9 @@ inputs, and asset names use the human release identity `0.4.2.1`.
 All releases are listed on the
 [releases page](https://github.com/ontograph/ontocode-cli/releases). The
 changelog is in [CHANGELOG.md](CHANGELOG.md).
+Per-release notes are kept in [docs/releases](docs/releases).
+
+## License
+
+Licensed under the [Apache-2.0 License](LICENSE). See [NOTICE](NOTICE) for
+attribution of derived code.
