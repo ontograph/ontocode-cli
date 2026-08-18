@@ -17,11 +17,29 @@ and project-plan template against `SHA256SUMS`:
 curl -fsSL https://raw.githubusercontent.com/ontograph/ontocode-cli/main/scripts/install/install.sh | sh
 ```
 
-Pin an explicit release with `--release`, for example `--release 0.4.2.2`.
+Pin an explicit release with `--release`, for example `--release 0.4.2.3`.
 
 Release identity note: GitHub tags, installer inputs, and asset names use the
-human release identity such as `0.4.2.2`, while the CLI reports the
-machine-readable Cargo version such as `0.4.2+2`.
+human release identity such as `0.4.2.3`, while the CLI reports the
+machine-readable Cargo version such as `0.4.2+3`.
+
+### Install the optional content pack
+
+Release `0.4.2.3` includes a curated pack containing the repository-owned build
+and release-publication skills. Install it into Ontocode home with:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/ontograph/ontocode-cli/main/scripts/install/install-content-pack.sh | sh -s -- --release 0.4.2.3 --scope home
+```
+
+For a trusted project-local installation, use:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/ontograph/ontocode-cli/main/scripts/install/install-content-pack.sh | sh -s -- --release 0.4.2.3 --scope project --directory /path/to/repo
+```
+
+The installer verifies the archive against the release `SHA256SUMS` and refuses
+to overwrite existing skills or agents.
 
 ### Verifying a download
 

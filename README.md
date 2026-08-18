@@ -18,12 +18,22 @@ curl -fsSL https://raw.githubusercontent.com/ontograph/ontocode-cli/main/scripts
 Pin an explicit release:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/ontograph/ontocode-cli/main/scripts/install/install.sh | sh -s -- --release 0.4.2.2
+curl -fsSL https://raw.githubusercontent.com/ontograph/ontocode-cli/main/scripts/install/install.sh | sh -s -- --release 0.4.2.3
 ```
 
 The installer supports Linux x86_64, verifies the binary and project-plan
 template against `SHA256SUMS`, and installs to `~/.local/bin` by default.
 See [docs/install.md](docs/install.md) for requirements and options.
+
+Install the optional curated build and release-publication skills into Ontocode
+home:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/ontograph/ontocode-cli/main/scripts/install/install-content-pack.sh | sh -s -- --release 0.4.2.3 --scope home
+```
+
+The content-pack installer also supports trusted project-local installation and
+refuses to overwrite existing skills or agents.
 
 ## Releases
 
@@ -32,9 +42,9 @@ Release scope:
 - unsigned Linux release binary first
 - macOS, Windows, and platform npm packages later when needed
 
-Current published release: `0.4.2.2` (`rust-v0.4.2.2`). Its Cargo package and
-machine-readable CLI version is `0.4.2+2`, while GitHub release tags, installer
-inputs, and asset names use the human release identity `0.4.2.2`.
+Current published release: `0.4.2.3` (`rust-v0.4.2.3`). Its Cargo package and
+machine-readable CLI version is `0.4.2+3`, while GitHub release tags, installer
+inputs, and asset names use the human release identity `0.4.2.3`.
 
 All releases are listed on the
 [releases page](https://github.com/ontograph/ontocode-cli/releases). The

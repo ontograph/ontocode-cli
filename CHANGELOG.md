@@ -4,6 +4,19 @@ Full release notes and downloadable assets are published on the
 [Ontocode releases page](https://github.com/ontograph/ontocode-cli/releases).
 Per-release notes are also kept under [docs/releases](docs/releases).
 
+## 0.4.2.3 — `rust-v0.4.2.3`
+
+Internal development release built from the current committed source on August
+18, 2026. Cargo package version `0.4.2+3`.
+
+- includes the manager-loop retry fixes published in `0.4.2.2`
+- excludes unrelated uncommitted changes from the primary development checkout
+- publishes repository-owned build and release-publication skills as an
+  optional curated content pack
+- supports non-overwriting home and trusted project-local content-pack installs
+
+See [docs/releases/v0.4.2.3.md](docs/releases/v0.4.2.3.md).
+
 ## 0.4.2.2 — `rust-v0.4.2.2`
 
 Internal fix release that restores authorized manager-loop retry overrides
