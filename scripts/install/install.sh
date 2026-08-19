@@ -10,7 +10,6 @@ GITHUB_AUTH_TOKEN="${GH_TOKEN:-${GITHUB_TOKEN:-}}"
 ONTOCODE_HOME_DIR="${ONTOCODE_HOME:-$HOME/.ontocode}"
 TEMPLATE_DIR="$ONTOCODE_HOME_DIR/templates"
 PROJECT_PLAN_TEMPLATE_PATH="$TEMPLATE_DIR/PROJECT_PLAN_AUTHORING_TEMPLATE.md"
-LEGACY_CODEX_DIR="$HOME/.codex"
 
 usage() {
   cat <<EOF
@@ -94,7 +93,6 @@ need mktemp
 need chmod
 need install
 need sha256sum
-need cp
 need_asset() {
   [ -s "$1" ] || { echo "Missing downloaded asset: $1" >&2; exit 1; }
 }
@@ -171,12 +169,6 @@ fi
 
 mkdir -p "$BIN_DIR"
 install -m 0755 "$archive" "$BIN_PATH"
-
-if [ ! -f "$ONTOCODE_HOME_DIR/config.toml" ] && [ -d "$LEGACY_CODEX_DIR" ] && [ "$ONTOCODE_HOME_DIR" != "$LEGACY_CODEX_DIR" ]; then
-  echo "==> Copying settings and history from $LEGACY_CODEX_DIR to $ONTOCODE_HOME_DIR"
-  mkdir -p "$ONTOCODE_HOME_DIR"
-  cp -R "$LEGACY_CODEX_DIR"/. "$ONTOCODE_HOME_DIR"/
-fi
 
 if [ "$project_plan_template_available" -eq 1 ]; then
   mkdir -p "$TEMPLATE_DIR"

@@ -4,6 +4,21 @@ Full release notes and downloadable assets are published on the
 [Ontocode releases page](https://github.com/ontograph/ontocode-cli/releases).
 Per-release notes are also kept under [docs/releases](docs/releases).
 
+## 0.4.2.4 — `rust-v0.4.2.4`
+
+Internal development prerelease built from the complete authorized development
+checkpoint on August 19, 2026. Cargo package version `0.4.2+4`.
+
+- includes current manager-loop recovery and role-routing fixes
+- includes session diagnostics, Excel offline tooling, and workspace skill
+  activation updates from the development checkpoint
+- publishes repository-owned build and release-publication skills as an
+  optional curated content pack
+- preserves the public distribution boundary: only scrubbed release artifacts
+  and consumer documentation are published here
+
+See [docs/releases/v0.4.2.4.md](docs/releases/v0.4.2.4.md).
+
 ## 0.4.2.3 — `rust-v0.4.2.3`
 
 Internal development release built from the current committed source on August
