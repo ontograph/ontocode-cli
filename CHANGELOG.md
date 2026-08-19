@@ -4,6 +4,18 @@ Full release notes and downloadable assets are published on the
 [Ontocode releases page](https://github.com/ontograph/ontocode-cli/releases).
 Per-release notes are also kept under [docs/releases](docs/releases).
 
+## Content Pack v1 — `content-pack-v1`
+
+First content pack released independently of the CLI binary, so agents and
+skills can be updated without reinstalling or rebuilding the CLI.
+
+- publishes 27 agent definitions and 47 skills built from a reviewed allowlist
+- adds a manifest recording every archive path, byte size, and SHA-256 digest
+- installs to `$ONTOCODE_HOME` or a named project, refusing to overwrite an
+  existing skill or agent
+- content-pack installer now resolves `content-pack-*` tags and selects the
+  newest content pack when `--release` is omitted
+
 ## 0.4.2.4 — `rust-v0.4.2.4`
 
 Internal development prerelease built from the complete authorized development

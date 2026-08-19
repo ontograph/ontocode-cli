@@ -13,6 +13,9 @@ Usage: install-content-pack.sh [--release VERSION] [--scope home|project] [--dir
 
 Project scope requires --directory. Existing skill or agent destinations are
 never overwritten.
+
+VERSION may be a CLI release such as 0.4.2.4, or a content-pack release such
+as content-pack-v1. Omit --release to install the newest content pack.
 EOF
 }
 
@@ -45,12 +48,29 @@ normalize_version() {
   case "$1" in rust-v*) printf '%s\n' "${1#rust-v}" ;; v*) printf '%s\n' "${1#v}" ;; *) printf '%s\n' "$1" ;; esac
 }
 
+# Content packs ship under their own tag so they can be updated without
+# rebuilding the CLI. Only fall back to a CLI release tag when the caller
+# names a CLI version.
+resolve_tag() {
+  case "$1" in
+    content-pack-*) printf '%s\n' "$1" ;;
+    *) printf 'rust-v%s\n' "$(normalize_version "$1")" ;;
+  esac
+}
+
 if [ -z "$RELEASE" ] || [ "$RELEASE" = "latest" ]; then
-  tag="$(curl -fsSL "https://api.github.com/repos/$REPO/releases?per_page=1" | sed -n 's/.*"tag_name":[[:space:]]*"\([^"]*\)".*/\1/p' | head -n 1)"
+  tag="$(curl -fsSL "https://api.github.com/repos/$REPO/releases?per_page=100" \
+    | sed -n 's/.*"tag_name":[[:space:]]*"\([^"]*\)".*/\1/p' \
+    | grep '^content-pack-' \
+    | head -n 1)"
+  [ -n "$tag" ] || { echo "No content-pack release found in $REPO." >&2; exit 1; }
 else
-  tag="rust-v$(normalize_version "$RELEASE")"
+  tag="$(resolve_tag "$RELEASE")"
 fi
-version="$(normalize_version "$tag")"
+case "$tag" in
+  content-pack-*) version="${tag#content-pack-v}" ;;
+  *) version="$(normalize_version "$tag")" ;;
+esac
 archive_name="ontocode-content-pack-$version.tar.gz"
 
 tmp_dir="$(mktemp -d)"

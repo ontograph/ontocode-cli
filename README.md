@@ -25,15 +25,31 @@ The installer supports Linux x86_64, verifies the binary and project-plan
 template against `SHA256SUMS`, and installs to `~/.local/bin` by default.
 See [docs/install.md](docs/install.md) for requirements and options.
 
-Install the optional curated build and release-publication skills into Ontocode
-home:
+## Agents and skills
+
+The agent definitions and skills ship as a content pack, released separately
+from the CLI so they can be updated without reinstalling the binary. The
+current pack is `content-pack-v1` and contains 27 agents and 47 skills.
+
+Install into Ontocode home:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/ontograph/ontocode-cli/main/scripts/install/install-content-pack.sh | sh -s -- --release 0.4.2.4 --scope home
+curl -fsSL https://raw.githubusercontent.com/ontograph/ontocode-cli/main/scripts/install/install-content-pack.sh | sh -s -- --scope home
 ```
 
-The content-pack installer also supports trusted project-local installation and
-refuses to overwrite existing skills or agents.
+Install into a single project:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/ontograph/ontocode-cli/main/scripts/install/install-content-pack.sh | sh -s -- --scope project --directory /path/to/project
+```
+
+Without `--release` the installer selects the newest content pack. Pass
+`--release content-pack-v1` to pin one.
+
+Home installs land in `$ONTOCODE_HOME/skills` and `$ONTOCODE_HOME/agents`,
+defaulting to `~/.ontocode`. Project installs land in `.agents/skills` and
+`.ontocode/agents`. The installer verifies the archive against `SHA256SUMS` and
+refuses to overwrite an existing skill or agent.
 
 ## Releases
 
@@ -52,6 +68,9 @@ All releases are listed on the
 changelog is in [CHANGELOG.md](CHANGELOG.md).
 Per-release notes are kept in [docs/releases](docs/releases).
 See the [0.4.2.4 release notes](docs/releases/v0.4.2.4.md).
+
+Content packs are versioned independently of the CLI and use `content-pack-v*`
+tags.
 
 ## License
 
