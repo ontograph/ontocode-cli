@@ -1,0 +1,4 @@
+interface:
+  display_name: "Axel UI UX Test Debugging"
+  short_description: "Diagnose UI UX tests at first divergence"
+  default_prompt: "Use $axel-debug-uiux-tests to reproduce and classify this Axel UI/UX test failure before any repair."

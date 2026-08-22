@@ -1,0 +1,5 @@
+interface:
+  display_name: "Axel TypeScript Development"
+  short_description: "Develop TypeScript using Axel conventions"
+  default_prompt: "Use $axel-typescript-development to implement this TypeScript change with Axel's existing build and style rules."
+

@@ -9,6 +9,13 @@ A discipline for hard bugs. Skip phases only when explicitly justified.
 
 When exploring the codebase, read `CONTEXT.md` (if it exists) to get a clear mental model of the relevant modules, and check ADRs in the area you're touching.
 
+For Axel Rust, C++, Qt, LibreOffice, or mixed-language build failures, read
+`references/axel-native-build-triage.md` before constructing the feedback loop.
+Use its native failure classification to separate test assertions, task scope,
+tool-policy blocks, and real compile/link defects, then identify the owning
+failure layer and smallest reproducible command; the phases below still govern
+diagnosis.
+
 ## Phase 1 — Build a feedback loop
 
 **This is the skill.** Everything else is mechanical. If you have a **tight** pass/fail signal for the bug — one that goes red on _this_ bug — you will find the cause; bisection, hypothesis-testing, and instrumentation all just consume it. If you don't have one, no amount of staring at code will save you.
@@ -132,3 +139,11 @@ Required before declaring done:
 - [ ] The hypothesis that turned out correct is stated in the commit / PR message — so the next debugger learns
 
 **Then ask: what would have prevented this bug?** If the answer involves architectural change (no good test seam, tangled callers, hidden coupling) hand off to the `/improve-codebase-architecture` skill with the specifics. Make the recommendation **after** the fix is in, not before — you have more information now than when you started.
+
+## Routine Tool Ownership
+
+This skill owns routine-tool operation 28, `BUILD_FAILURE_CLASSIFIER`, in
+`~/.ontocode/skills/ontocode-routine-tools/references/tool-catalog.md`.
+Classify infrastructure, dependency, sandbox, and product-code failures
+separately, retain the smallest failing command as evidence, and return the
+coordinator's shared envelope.

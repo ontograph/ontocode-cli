@@ -1,0 +1,4 @@
+interface:
+  display_name: "Axel Owner-Layer UI Tests"
+  short_description: "Run focused owner-layer UI UX checks"
+  default_prompt: "Use $axel-run-owner-ui-tests to run and report the narrow owner-layer UI tests for this Axel change."

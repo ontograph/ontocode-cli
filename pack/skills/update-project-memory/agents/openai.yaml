@@ -1,0 +1,6 @@
+interface:
+  display_name: "Update Project Memory"
+  short_description: "Verify and close the current work stage"
+  default_prompt: "Use $update-project-memory to verify and update durable project memory for the current stage."
+policy:
+  allow_implicit_invocation: false

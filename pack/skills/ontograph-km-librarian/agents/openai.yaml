@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ontograph KM Librarian"
+  short_description: "Route local KM work through librarian agents"
+  default_prompt: "Use $ontograph-km-librarian to handle this local Ontograph Knowledge Module task through the librarian manager, worker, and reviewer chain."

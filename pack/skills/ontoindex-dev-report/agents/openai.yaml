@@ -1,0 +1,4 @@
+interface:
+  display_name: "OntoIndex Dev Report"
+  short_description: "Create evidence-first reports for the OntoIndex engineering team"
+  default_prompt: "Use $ontoindex-dev-report to turn the supplied findings and artifacts into an evidence-classified report for the OntoIndex engineering team."

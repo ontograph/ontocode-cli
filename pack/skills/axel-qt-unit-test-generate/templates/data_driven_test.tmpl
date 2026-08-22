@@ -1,0 +1,44 @@
+// 数据驱动测试模板 — Level 1 (Specification-Based)
+//
+// 使用场景: 函数有明确的输入输出规范，需要覆盖等价类和边界值
+// 文件名: test_{CLASS_NAME_LOWER}.cpp 中嵌入
+
+void test{METHOD_TITLE}_data()
+{{
+    // ── 声明数据列 ──────────────────────────────────
+    // 每列对应测试函数中的一个 QFETCH 参数
+    QTest::addColumn<{{TYPE_1}}>("input");
+    QTest::addColumn<{{TYPE_2}}>("expected");
+
+    // ── 有效等价类 ──────────────────────────────────
+    // 正常范围内的输入，应产生正确输出
+    QTest::newRow("valid_normal_1") << {{V1}} << {{E1}};
+    QTest::newRow("valid_normal_2") << {{V2}} << {{E2}};
+
+    // ── 边界值 ──────────────────────────────────────
+    // 等价类边界处的值，错误常发生于此
+    QTest::newRow("boundary_min")    << {{MIN_V}} << {{MIN_E}};
+    QTest::newRow("boundary_min+1")  << {{MIN_V+1}} << {{MIN_E+1}};
+    QTest::newRow("boundary_max-1")  << {{MAX_V-1}} << {{MAX_E-1}};
+    QTest::newRow("boundary_max")    << {{MAX_V}} << {{MAX_E}};
+
+    // ── 无效等价类 ──────────────────────────────────
+    // 不符合规范的输入，应被拒绝或返回错误
+    QTest::newRow("invalid_below")   << {{MIN_V-1}} << {{ERROR_CODE}};
+    QTest::newRow("invalid_above")   << {{MAX_V+1}} << {{ERROR_CODE}};
+
+    // ── 特殊值 ──────────────────────────────────────
+    QTest::newRow("zero")            << 0 << {{ZERO_E}};
+    QTest::newRow("negative")        << -1 << {{NEG_E}};
+}}
+
+void test{METHOD_TITLE}()
+{{
+    QFETCH({{TYPE_1}}, input);
+    QFETCH({{TYPE_2}}, expected);
+
+    {CLASS_NAME} obj;
+    {{RESULT_TYPE}} result = obj.{METHOD_NAME}(input);
+
+    QCOMPARE(result, expected);
+}}

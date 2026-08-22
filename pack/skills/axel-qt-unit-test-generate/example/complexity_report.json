@@ -1,0 +1,222 @@
+{
+  "functions": [
+    {
+      "id": "Calculator::Calculator#56c908ce",
+      "name": "Calculator::Calculator",
+      "file": "/data/workspace/git/qt-unit-test-generate/example/src/calculator.cpp",
+      "line": 3,
+      "complexity": 1,
+      "access": "public",
+      "class": "Calculator",
+      "params": [],
+      "return_type": "void"
+    },
+    {
+      "id": "Calculator::add#73f63dc0",
+      "name": "Calculator::add",
+      "file": "/data/workspace/git/qt-unit-test-generate/example/src/calculator.cpp",
+      "line": 7,
+      "complexity": 1,
+      "access": "public",
+      "class": "Calculator",
+      "params": [
+        {
+          "name": "a",
+          "type": "int"
+        },
+        {
+          "name": "b",
+          "type": "int"
+        }
+      ],
+      "return_type": "int"
+    },
+    {
+      "id": "Calculator::sub#0b4d6600",
+      "name": "Calculator::sub",
+      "file": "/data/workspace/git/qt-unit-test-generate/example/src/calculator.cpp",
+      "line": 12,
+      "complexity": 1,
+      "access": "public",
+      "class": "Calculator",
+      "params": [
+        {
+          "name": "a",
+          "type": "int"
+        },
+        {
+          "name": "b",
+          "type": "int"
+        }
+      ],
+      "return_type": "int"
+    },
+    {
+      "id": "Calculator::divide#2a8f9749",
+      "name": "Calculator::divide",
+      "file": "/data/workspace/git/qt-unit-test-generate/example/src/calculator.cpp",
+      "line": 17,
+      "complexity": 2,
+      "access": "public",
+      "class": "Calculator",
+      "params": [
+        {
+          "name": "a",
+          "type": "int"
+        },
+        {
+          "name": "b",
+          "type": "int"
+        }
+      ],
+      "return_type": "int"
+    },
+    {
+      "id": "Calculator::classify#46fd6c21",
+      "name": "Calculator::classify",
+      "file": "/data/workspace/git/qt-unit-test-generate/example/src/calculator.cpp",
+      "line": 25,
+      "complexity": 3,
+      "access": "public",
+      "class": "Calculator",
+      "params": [
+        {
+          "name": "value",
+          "type": "int"
+        }
+      ],
+      "return_type": "int"
+    },
+    {
+      "id": "Calculator::compute#9969bff4",
+      "name": "Calculator::compute",
+      "file": "/data/workspace/git/qt-unit-test-generate/example/src/calculator.cpp",
+      "line": 36,
+      "complexity": 2,
+      "access": "public",
+      "class": "Calculator",
+      "params": [
+        {
+          "name": "a",
+          "type": "int"
+        },
+        {
+          "name": "b",
+          "type": "int"
+        },
+        {
+          "name": "op",
+          "type": "int"
+        }
+      ],
+      "return_type": "int"
+    },
+    {
+      "id": "Calculator::formatResult#2e5a7099",
+      "name": "Calculator::formatResult",
+      "file": "/data/workspace/git/qt-unit-test-generate/example/src/calculator.cpp",
+      "line": 60,
+      "complexity": 11,
+      "access": "public",
+      "class": "Calculator",
+      "params": [
+        {
+          "name": "value",
+          "type": "int"
+        },
+        {
+          "name": "withSign",
+          "type": "bool"
+        },
+        {
+          "name": "withCommas",
+          "type": "bool"
+        }
+      ],
+      "return_type": "QString"
+    },
+    {
+      "id": "Calculator::validateInput#3fe4bc47",
+      "name": "Calculator::validateInput",
+      "file": "/data/workspace/git/qt-unit-test-generate/example/src/calculator.cpp",
+      "line": 92,
+      "complexity": 10,
+      "access": "public",
+      "class": "Calculator",
+      "params": [
+        {
+          "name": "input",
+          "type": "const QString &"
+        }
+      ],
+      "return_type": "bool"
+    },
+    {
+      "id": "Calculator::parseNumber#08993874",
+      "name": "Calculator::parseNumber",
+      "file": "/data/workspace/git/qt-unit-test-generate/example/src/calculator.cpp",
+      "line": 123,
+      "complexity": 9,
+      "access": "public",
+      "class": "Calculator",
+      "params": [
+        {
+          "name": "str",
+          "type": "const QString &"
+        },
+        {
+          "name": "ok",
+          "type": "bool *"
+        }
+      ],
+      "return_type": "int"
+    },
+    {
+      "id": "Calculator::doMultiply#e5670bcb",
+      "name": "Calculator::doMultiply",
+      "file": "/data/workspace/git/qt-unit-test-generate/example/src/calculator.cpp",
+      "line": 153,
+      "complexity": 1,
+      "access": "private",
+      "class": "Calculator",
+      "params": [
+        {
+          "name": "a",
+          "type": "int"
+        },
+        {
+          "name": "b",
+          "type": "int"
+        }
+      ],
+      "return_type": "int"
+    },
+    {
+      "id": "Calculator::doDivide#d0d119d8",
+      "name": "Calculator::doDivide",
+      "file": "/data/workspace/git/qt-unit-test-generate/example/src/calculator.cpp",
+      "line": 158,
+      "complexity": 2,
+      "access": "private",
+      "class": "Calculator",
+      "params": [
+        {
+          "name": "a",
+          "type": "int"
+        },
+        {
+          "name": "b",
+          "type": "int"
+        }
+      ],
+      "return_type": "int"
+    }
+  ],
+  "summary": {
+    "total_functions": 11,
+    "max_complexity": 11,
+    "avg_complexity": 3.91,
+    "high_complexity_count": 0,
+    "very_high_complexity_count": 0
+  }
+}

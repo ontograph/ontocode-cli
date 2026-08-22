@@ -1,0 +1,4 @@
+interface:
+  display_name: "Axel UI Persistence Verification"
+  short_description: "Verify save close reopen UI persistence"
+  default_prompt: "Use $axel-verify-ui-persistence to prove this UI mutation survives save, close, and reopen."

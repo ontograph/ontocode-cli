@@ -1,0 +1,4 @@
+interface:
+  display_name: "Axel UI Evidence Qualification"
+  short_description: "Qualify UI UX evidence as pass fail or hold"
+  default_prompt: "Use $axel-qualify-ui-evidence to audit this UI/UX evidence packet and issue a justified verdict."

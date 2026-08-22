@@ -1,0 +1,4 @@
+interface:
+  display_name: "Axel Background Job Watch"
+  short_description: "Watch long Axel jobs without polling churn"
+  default_prompt: "Use $axel-background-job-watch to monitor this Axel background build to completion."

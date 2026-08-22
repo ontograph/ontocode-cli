@@ -1,0 +1,4 @@
+interface:
+  display_name: "Axel Rust Engine Seam Audit"
+  short_description: "Audit Rust workbook engine integration seams"
+  default_prompt: "Use $axel-rust-engine-seam-audit to audit this Axel Rust workbook engine seam against C ABI safety, engine routing, build wiring, oracle, and rollback requirements."

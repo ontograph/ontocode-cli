@@ -1,0 +1,17 @@
+{
+  "browser": {
+    "userDataDir": "~/.config/agent-skills/my-agent-browser/user-data",
+    "headless": true,
+    "proxy": "",
+    "viewport": "1280x720",
+    "display": "",
+    "debuggingPort": 39813,
+    "extraArgs": [],
+    "browserUrl": "",
+    "lazyStart": true
+  },
+  "mcp": {
+    "features": [],
+    "flags": []
+  }
+}

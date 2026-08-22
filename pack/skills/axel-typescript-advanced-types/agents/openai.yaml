@@ -1,0 +1,4 @@
+interface:
+  display_name: "Axel Advanced TypeScript Types"
+  short_description: "Use advanced types only when justified"
+  default_prompt: "Use $axel-typescript-advanced-types to express this invariant compatibly with Axel's TypeScript version."

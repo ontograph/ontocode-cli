@@ -1,0 +1,4 @@
+interface:
+  display_name: "Axel UI UX Test Selector"
+  short_description: "Select authoritative UI UX test evidence"
+  default_prompt: "Use $axel-select-uiux-tests to choose the smallest authoritative UI/UX test packet for this Axel change."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ontocode Tool Contract Preflight"
+  short_description: "Check tool contracts before substantive work"
+  default_prompt: "Preflight this task against the callable tool surface and report blockers with actionable fallbacks."

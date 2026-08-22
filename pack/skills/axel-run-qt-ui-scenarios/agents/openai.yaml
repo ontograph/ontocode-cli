@@ -1,0 +1,4 @@
+interface:
+  display_name: "Axel Qt UI Scenarios"
+  short_description: "Run native Qt UI scenarios with evidence"
+  default_prompt: "Use $axel-run-qt-ui-scenarios to execute the focused native Qt UI scenario and retain reproducible evidence."

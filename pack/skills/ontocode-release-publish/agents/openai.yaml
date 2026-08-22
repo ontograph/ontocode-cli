@@ -1,4 +1,0 @@
-interface:
-  display_name: "Release Publisher"
-  short_description: "Publish a release to the distribution repo"
-  default_prompt: "Publish the current Ontocode release to ontograph/ontocode-cli: verify assets and checksums, scrub every asset for private paths and internal references, create the GitHub release, publish the release docs, and run an unauthenticated installer smoke against the live release."

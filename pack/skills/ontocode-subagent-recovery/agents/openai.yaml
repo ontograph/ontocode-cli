@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ontocode Subagent Recovery"
+  short_description: "Recover failed delegated Ontocode work safely"
+  default_prompt: "Diagnose this failed subagent run, apply bounded recovery, and report authenticated evidence."

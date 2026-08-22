@@ -1,0 +1,4 @@
+interface:
+  display_name: "Axel Release Qualification"
+  short_description: "Qualify Axel desktop release artifacts"
+  default_prompt: "Assess the current Axel artifact evidence for GA or prerelease qualification without publishing unless explicitly authorized."
