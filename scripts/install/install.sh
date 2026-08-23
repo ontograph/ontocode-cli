@@ -82,12 +82,26 @@ curl_file() {
   fi
 }
 
-json_value() {
-  sed -n "s/.*\"$1\":[[:space:]]*\"\\([^\"]*\\)\".*/\\1/p" | head -n 1
+json_tag_with_prefix() {
+  prefix="$1"
+  awk -v prefix="$prefix" '
+    {
+      remaining = $0
+      while (match(remaining, /"tag_name"[[:space:]]*:[[:space:]]*"[^"]*"/)) {
+        tag = substr(remaining, RSTART, RLENGTH)
+        sub(/^.*:[[:space:]]*"/, "", tag)
+        sub(/"$/, "", tag)
+        if (index(tag, prefix) == 1) {
+          print tag
+          exit
+        }
+        remaining = substr(remaining, RSTART + RLENGTH)
+      }
+    }
+  '
 }
 
 need curl
-need sed
 need awk
 need mktemp
 need chmod
@@ -108,7 +122,8 @@ verify_asset_checksum() {
 }
 
 if [ "$RELEASE" = "latest" ] || [ -z "$RELEASE" ]; then
-  tag="$(curl_json "https://api.github.com/repos/$REPO/releases?per_page=1" | json_value tag_name)"
+  tag="$(curl_json "https://api.github.com/repos/$REPO/releases?per_page=100" | json_tag_with_prefix rust-v)"
+  [ -n "$tag" ] || { echo "No rust-v* Ontocode CLI release found in $REPO." >&2; exit 1; }
 else
   tag="rust-v$(normalize_version "$RELEASE")"
 fi

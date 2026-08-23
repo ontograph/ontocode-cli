@@ -4,6 +4,22 @@ Full release notes and downloadable assets are published on the
 [Ontocode releases page](https://github.com/ontograph/ontocode-cli/releases).
 Per-release notes are also kept under [docs/releases](docs/releases).
 
+## 0.4.2.5 — `rust-v0.4.2.5`
+
+Internal development fix release built from the reviewed August 23, 2026
+source snapshot. Cargo package version `0.4.2+5`.
+
+- prevents assistant-prefill requests from reaching provider request paths
+- aligns bounded sub-agent spawn selection with the current configuration APIs
+- preserves active-task selection for concurrent worktree validation flows
+- makes the default CLI installer select the newest CLI release even when a
+  newer content-pack release exists
+- hardens detached compiler receipt ownership, path validation, and retention
+- publishes the matching curated agents and skills pack without changing the
+  independently versioned Content Pack v3 release
+
+See [docs/releases/v0.4.2.5.md](docs/releases/v0.4.2.5.md).
+
 ## Content Pack v1 — `content-pack-v1`
 
 First content pack released independently of the CLI binary, so agents and
