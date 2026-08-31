@@ -12,7 +12,8 @@ usage() {
 Usage: install-content-pack.sh [--release VERSION] [--scope home|project] [--directory PATH]
 
 Project scope requires --directory. Existing skill or agent destinations are
-never overwritten.
+never overwritten. Home scope installs into \${ONTOCODE_HOME:-\$HOME/.ontocode},
+which is also where the CDR role pack is discovered.
 
 VERSION may be a CLI release such as 0.4.2.4, or a content-pack release such
 as content-pack-v1. Omit --release to install the newest content pack.
@@ -40,7 +41,7 @@ case "$SCOPE" in
   *) echo "Scope must be home or project." >&2; exit 2 ;;
 esac
 
-for command_name in curl tar sha256sum awk mktemp install cp mkdir basename sed head; do
+for command_name in curl tar sha256sum awk mktemp install cp mkdir chmod basename dirname sed head mv; do
   command -v "$command_name" >/dev/null 2>&1 || { echo "$command_name is required." >&2; exit 1; }
 done
 
@@ -74,7 +75,10 @@ esac
 archive_name="ontocode-content-pack-$version.tar.gz"
 
 tmp_dir="$(mktemp -d)"
-trap 'rm -rf "$tmp_dir"' EXIT INT TERM
+cleanup() {
+  rm -rf "$tmp_dir"
+}
+trap cleanup EXIT INT TERM
 archive="$tmp_dir/$archive_name"
 checksums="$tmp_dir/SHA256SUMS"
 base_url="${ONTOCODE_RELEASE_BASE_URL:-https://github.com/$REPO/releases/download/$tag}"

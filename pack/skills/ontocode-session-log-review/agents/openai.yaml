@@ -1,4 +1,0 @@
-interface:
-  display_name: "Ontocode Session Log Review"
-  short_description: "Analyze recurring Ontocode session workflows"
-  default_prompt: "Use $ontocode-session-log-review to compare Ontocode session workflows, recommendation lifecycle, and repeated operations across the requested window."

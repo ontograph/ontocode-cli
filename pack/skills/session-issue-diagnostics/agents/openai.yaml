@@ -1,4 +1,0 @@
-interface:
-  display_name: "Session Issue Diagnostics"
-  short_description: "Diagnose one sanitized session incident"
-  default_prompt: "Use $session-issue-diagnostics to guide diagnosis of this specific incident or interpret its sanitized report."

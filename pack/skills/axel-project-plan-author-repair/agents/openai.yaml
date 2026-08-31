@@ -1,4 +1,0 @@
-interface:
-  display_name: "Axel Project Plan Author Repair"
-  short_description: "Author and repair validated Axel project plans"
-  default_prompt: "Use $axel-project-plan-author-repair to author or repair this Axel project plan against repository rules, source evidence, OntoIndex, and project_plan_validate."

@@ -1,4 +1,0 @@
-interface:
-  display_name: "Ontocode Routine Tools"
-  short_description: "Route and standardize routine-tool operations"
-  default_prompt: "Select the owner and contract for an Ontocode routine-tool operation."

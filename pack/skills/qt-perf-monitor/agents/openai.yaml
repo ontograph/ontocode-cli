@@ -1,4 +1,0 @@
-interface:
-  display_name: "Qt Performance and Correctness"
-  short_description: "Check Qt performance or native-grid proof"
-  default_prompt: "Use $qt-perf-monitor in the appropriate performance or native-grid correctness mode for this Qt task."

@@ -1,4 +1,0 @@
-interface:
-  display_name: "Playwriter"
-  short_description: "Validate browser UI with a host-installed Playwriter CLI"
-  default_prompt: "Use $playwriter to validate this browser workflow and capture the requested evidence."

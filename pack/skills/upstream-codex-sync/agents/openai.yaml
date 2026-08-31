@@ -1,0 +1,4 @@
+interface:
+  display_name: "Upstream Codex Sync"
+  short_description: "Compare and merge upstream Codex changes"
+  default_prompt: "Use $upstream-codex-sync to compare openai/codex with this fork and prepare a safe merge plan."

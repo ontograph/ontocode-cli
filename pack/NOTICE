@@ -4,23 +4,3 @@ Copyright 2025 OpenAI
 This project includes code derived from [Ratatui](https://github.com/ratatui/ratatui), licensed under the MIT license.
 Copyright (c) 2016-2022 Florian Dehau
 Copyright (c) 2023-2025 The Ratatui Developers
-
-## Skill licenses
-
-The default license for first-party Ontocode skills in `pack/skills` is
-Apache-2.0. The following bundled skills declare or carry different licenses;
-the manifest records the applicable SPDX identifier for each:
-
-- MIT: `axel-author-playwright-specs`, `axel-chrome-devtools-testing`,
-  `axel-python-performance-optimization`, `axel-python-pro`,
-  `axel-python-testing-patterns`, `axel-rust-standard`, `ponytail`,
-  `python-pro`, `rust-skills`
-- MPL-2.0: `axel-browser-client`, `axel-ci-packaging-gates`,
-  `axel-large-document-performance`, `axel-native-lokit-platform`,
-  `axel-rust-supplement`, `axel-wasm-data-kernels`,
-  `axel-xlsx-workbook-engine`
-- GPL-3.0-only: `axel-pyqt-testing`
-- BSD-3-Clause-Clear: `axel-qt-visual-testing`
-
-Where a skill has a bundled `LICENSE` file, that file is authoritative for its
-copyright notices and terms.

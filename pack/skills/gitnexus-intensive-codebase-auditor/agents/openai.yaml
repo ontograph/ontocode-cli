@@ -1,7 +1,0 @@
-interface:
-  display_name: "GitNexus Intensive Auditor"
-  short_description: "Strict GitNexus audit workflow"
-  default_prompt: "Use $gitnexus-intensive-codebase-auditor to audit this codebase against current target HEAD, verify each claim, dedupe root causes, and prepare conflict-safe worker prompts."
-
-policy:
-  allow_implicit_invocation: true

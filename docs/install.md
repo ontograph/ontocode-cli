@@ -25,17 +25,17 @@ machine-readable Cargo version such as `0.4.2+5`.
 
 ### Install the optional content pack
 
-Release `0.4.2.5` includes a curated agents and skills pack. Install it into
-Ontocode home with:
+The standalone `content-pack-v4` release includes 25 curated agent definitions
+and 27 skills. Install it into Ontocode home with:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/ontograph/ontocode-cli/main/scripts/install/install-content-pack.sh | sh -s -- --release 0.4.2.5 --scope home
+curl -fsSL https://raw.githubusercontent.com/ontograph/ontocode-cli/main/scripts/install/install-content-pack.sh | sh -s -- --release content-pack-v4 --scope home
 ```
 
 For a trusted project-local installation, use:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/ontograph/ontocode-cli/main/scripts/install/install-content-pack.sh | sh -s -- --release 0.4.2.5 --scope project --directory /path/to/repo
+curl -fsSL https://raw.githubusercontent.com/ontograph/ontocode-cli/main/scripts/install/install-content-pack.sh | sh -s -- --release content-pack-v4 --scope project --directory /path/to/repo
 ```
 
 The installer verifies the archive against the release `SHA256SUMS` and refuses

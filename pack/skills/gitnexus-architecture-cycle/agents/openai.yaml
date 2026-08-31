@@ -1,4 +1,0 @@
-interface:
-  display_name: "GitNexus Architecture Cycle"
-  short_description: "Evidence-first ADR narrowing"
-  default_prompt: "Use $gitnexus-architecture-cycle to review this GitNexus architecture proposal, challenge speculative scope, and keep only evidence-backed implementation paths."

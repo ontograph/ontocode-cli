@@ -29,7 +29,7 @@ See [docs/install.md](docs/install.md) for requirements and options.
 
 The agent definitions and skills ship as a content pack, released separately
 from the CLI so they can be updated without reinstalling the binary. The
-current pack is `content-pack-v3` and contains 27 agents and 131 skills.
+current pack is `content-pack-v4` and contains 25 agents and 27 skills.
 
 Install into Ontocode home:
 
@@ -44,7 +44,7 @@ curl -fsSL https://raw.githubusercontent.com/ontograph/ontocode-cli/main/scripts
 ```
 
 Without `--release` the installer selects the newest content pack. Pass
-`--release content-pack-v3` to pin the current pack.
+`--release content-pack-v4` to pin the current pack.
 
 Home installs land in `$ONTOCODE_HOME/skills` and `$ONTOCODE_HOME/agents`,
 defaulting to `~/.ontocode`. Project installs land in `.agents/skills` and
