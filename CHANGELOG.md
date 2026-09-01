@@ -31,6 +31,18 @@ Independent content-pack prerelease for the current agent and skill definitions.
 
 See [docs/releases/content-pack-v5.md](docs/releases/content-pack-v5.md).
 
+## Content Pack v4 — `content-pack-v4`
+
+Standalone curated agents and skills update published independently of the CLI
+binary.
+
+- publishes 25 agent definitions and 27 skills from the reviewed exact allowlist
+- records archive paths, provenance, licenses, sizes, and SHA-256 digests
+- updates the browsable `pack/` mirror from the same archive
+- keeps non-overwriting home and project-local installation behavior
+
+See the [Content Pack v4 release](https://github.com/ontograph/ontocode-cli/releases/tag/content-pack-v4).
+
 ## 0.4.2.5 — `rust-v0.4.2.5`
 
 Internal development fix release built from the reviewed August 23, 2026
