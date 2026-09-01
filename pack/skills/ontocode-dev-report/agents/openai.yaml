@@ -1,4 +1,0 @@
-interface:
-  display_name: "Ontocode Dev Report"
-  short_description: "Prepare evidence-first reports for the Ontocode development team"
-  default_prompt: "Prepare a sanitized, evidence-first report for the Ontocode development team from the supplied diagnostics, session-log findings, and artifacts."

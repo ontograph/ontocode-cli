@@ -1,4 +1,0 @@
-interface:
-  display_name: "Memory Bank Harness"
-  short_description: "Set up deterministic repository guardrails"
-  default_prompt: "Use $mb-harness to establish deterministic commands, gates, and a bounded worktree task packet."

@@ -1,5 +1,0 @@
-interface:
-  display_name: "Axel TypeScript Testing"
-  short_description: "Test TypeScript in Axel's owning layer"
-  default_prompt: "Use $axel-typescript-testing to add the smallest authoritative regression test for this Axel behavior."
-

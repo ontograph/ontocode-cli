@@ -1,4 +1,0 @@
-interface:
-  display_name: "Axel Disk Space Recovery"
-  short_description: "Recover disk space without losing Axel evidence"
-  default_prompt: "Inspect Axel disk usage, propose or perform only approved safe cleanup, preserve authoritative artifacts, and resume the interrupted task."

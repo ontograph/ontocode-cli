@@ -1,953 +1,319 @@
 schema_version = 1
 name = "ontocode-agents-and-skills"
-version = "3"
+version = "5"
 license = "Apache-2.0"
-source_commit = "3fd5674261de8a5365a7a08c512a655662aa2167"
+source_commit = "a31d04ef4054a8e80a4a11e23613829e09bc4442"
+repository_source_commit = "a31d04ef4054a8e80a4a11e23613829e09bc4442"
+definitions_source = "external-definitions-root"
 
 [[skills]]
-name = "ask-matt"
-source = ".agents/skills/ask-matt"
-destination = "skills/ask-matt"
-license = "Apache-2.0"
-
-[[skills]]
-name = "audit-issue-prep"
-source = ".agents/skills/audit-issue-prep"
-destination = "skills/audit-issue-prep"
-license = "Apache-2.0"
-
-[[skills]]
-name = "axel-author-playwright-specs"
-source = ".ontocode/skills/axel-author-playwright-specs"
-destination = "skills/axel-author-playwright-specs"
-license = "MIT"
-
-[[skills]]
-name = "axel-background-job-watch"
-source = ".ontocode/skills/axel-background-job-watch"
-destination = "skills/axel-background-job-watch"
-license = "Apache-2.0"
-
-[[skills]]
-name = "axel-browser-client"
-source = ".ontocode/skills/axel-browser-client"
-destination = "skills/axel-browser-client"
-license = "MPL-2.0"
-
-[[skills]]
-name = "axel-chrome-devtools-testing"
-source = ".ontocode/skills/axel-chrome-devtools-testing"
-destination = "skills/axel-chrome-devtools-testing"
-license = "MIT"
-
-[[skills]]
-name = "axel-ci-packaging-gates"
-source = ".ontocode/skills/axel-ci-packaging-gates"
-destination = "skills/axel-ci-packaging-gates"
-license = "MPL-2.0"
-
-[[skills]]
-name = "axel-debug-playwright-reports"
-source = ".ontocode/skills/axel-debug-playwright-reports"
-destination = "skills/axel-debug-playwright-reports"
-license = "Apache-2.0"
-
-[[skills]]
-name = "axel-debug-uiux-tests"
-source = ".ontocode/skills/axel-debug-uiux-tests"
-destination = "skills/axel-debug-uiux-tests"
-license = "Apache-2.0"
-
-[[skills]]
-name = "axel-disk-space-recovery"
-source = ".ontocode/skills/axel-disk-space-recovery"
-destination = "skills/axel-disk-space-recovery"
-license = "Apache-2.0"
-
-[[skills]]
-name = "axel-e2e-test-patterns"
-source = ".ontocode/skills/axel-e2e-test-patterns"
-destination = "skills/axel-e2e-test-patterns"
-license = "Apache-2.0"
-
-[[skills]]
-name = "axel-generate-playwright-specs"
-source = ".ontocode/skills/axel-generate-playwright-specs"
-destination = "skills/axel-generate-playwright-specs"
-license = "Apache-2.0"
-
-[[skills]]
-name = "axel-large-document-performance"
-source = ".ontocode/skills/axel-large-document-performance"
-destination = "skills/axel-large-document-performance"
-license = "MPL-2.0"
-
-[[skills]]
-name = "axel-native-lokit-platform"
-source = ".ontocode/skills/axel-native-lokit-platform"
-destination = "skills/axel-native-lokit-platform"
-license = "MPL-2.0"
-
-[[skills]]
-name = "axel-plan-autopilot"
-source = ".ontocode/skills/axel-plan-autopilot"
-destination = "skills/axel-plan-autopilot"
-license = "Apache-2.0"
-
-[[skills]]
-name = "axel-project-plan-author-repair"
-source = ".ontocode/skills/axel-project-plan-author-repair"
-destination = "skills/axel-project-plan-author-repair"
-license = "Apache-2.0"
-
-[[skills]]
-name = "axel-pyqt-testing"
-source = ".ontocode/skills/axel-pyqt-testing"
-destination = "skills/axel-pyqt-testing"
-license = "GPL-3.0-only"
-
-[[skills]]
-name = "axel-python-performance-optimization"
-source = ".ontocode/skills/axel-python-performance-optimization"
-destination = "skills/axel-python-performance-optimization"
-license = "MIT"
-
-[[skills]]
-name = "axel-python-pro"
-source = ".ontocode/skills/axel-python-pro"
-destination = "skills/axel-python-pro"
-license = "MIT"
-
-[[skills]]
-name = "axel-python-testing-patterns"
-source = ".ontocode/skills/axel-python-testing-patterns"
-destination = "skills/axel-python-testing-patterns"
-license = "MIT"
-
-[[skills]]
-name = "axel-qt-unit-test-generate"
-source = ".ontocode/skills/axel-qt-unit-test-generate"
-destination = "skills/axel-qt-unit-test-generate"
-license = "Apache-2.0"
-
-[[skills]]
-name = "axel-qt-visual-testing"
-source = ".ontocode/skills/axel-qt-visual-testing"
-destination = "skills/axel-qt-visual-testing"
-license = "BSD-3-Clause-Clear"
-
-[[skills]]
-name = "axel-qualify-ui-evidence"
-source = ".ontocode/skills/axel-qualify-ui-evidence"
-destination = "skills/axel-qualify-ui-evidence"
-license = "Apache-2.0"
-
-[[skills]]
-name = "axel-release-qualification"
-source = ".ontocode/skills/axel-release-qualification"
-destination = "skills/axel-release-qualification"
-license = "Apache-2.0"
-
-[[skills]]
-name = "axel-review-e2e-specs"
-source = ".ontocode/skills/axel-review-e2e-specs"
-destination = "skills/axel-review-e2e-specs"
-license = "Apache-2.0"
-
-[[skills]]
-name = "axel-run-owner-ui-tests"
-source = ".ontocode/skills/axel-run-owner-ui-tests"
-destination = "skills/axel-run-owner-ui-tests"
-license = "Apache-2.0"
-
-[[skills]]
-name = "axel-run-qt-ui-scenarios"
-source = ".ontocode/skills/axel-run-qt-ui-scenarios"
-destination = "skills/axel-run-qt-ui-scenarios"
-license = "Apache-2.0"
-
-[[skills]]
-name = "axel-rust-engine-seam-audit"
-source = ".ontocode/skills/axel-rust-engine-seam-audit"
-destination = "skills/axel-rust-engine-seam-audit"
-license = "Apache-2.0"
-
-[[skills]]
-name = "axel-rust-standard"
-source = ".ontocode/skills/axel-rust-standard"
-destination = "skills/axel-rust-standard"
-license = "MIT"
-
-[[skills]]
-name = "axel-rust-supplement"
-source = ".ontocode/skills/axel-rust-supplement"
-destination = "skills/axel-rust-supplement"
-license = "MPL-2.0"
-
-[[skills]]
-name = "axel-select-uiux-tests"
-source = ".ontocode/skills/axel-select-uiux-tests"
-destination = "skills/axel-select-uiux-tests"
-license = "Apache-2.0"
-
-[[skills]]
-name = "axel-triage-native-crash"
-source = ".ontocode/skills/axel-triage-native-crash"
-destination = "skills/axel-triage-native-crash"
-license = "Apache-2.0"
-
-[[skills]]
-name = "axel-typescript-advanced-types"
-source = ".ontocode/skills/axel-typescript-advanced-types"
-destination = "skills/axel-typescript-advanced-types"
-license = "Apache-2.0"
-
-[[skills]]
-name = "axel-typescript-development"
-source = ".ontocode/skills/axel-typescript-development"
-destination = "skills/axel-typescript-development"
-license = "Apache-2.0"
-
-[[skills]]
-name = "axel-typescript-testing"
-source = ".ontocode/skills/axel-typescript-testing"
-destination = "skills/axel-typescript-testing"
-license = "Apache-2.0"
-
-[[skills]]
-name = "axel-verify-browser-ui"
-source = ".ontocode/skills/axel-verify-browser-ui"
-destination = "skills/axel-verify-browser-ui"
-license = "Apache-2.0"
-
-[[skills]]
-name = "axel-verify-ui-persistence"
-source = ".ontocode/skills/axel-verify-ui-persistence"
-destination = "skills/axel-verify-ui-persistence"
-license = "Apache-2.0"
-
-[[skills]]
-name = "axel-wasm-data-kernels"
-source = ".ontocode/skills/axel-wasm-data-kernels"
-destination = "skills/axel-wasm-data-kernels"
-license = "MPL-2.0"
-
-[[skills]]
-name = "axel-xlsx-workbook-engine"
-source = ".ontocode/skills/axel-xlsx-workbook-engine"
-destination = "skills/axel-xlsx-workbook-engine"
-license = "MPL-2.0"
-
-[[skills]]
-name = "caveman"
-source = ".agents/skills/caveman"
-destination = "skills/caveman"
-license = "Apache-2.0"
-
-[[skills]]
-name = "caveman-commit"
-source = ".agents/skills/caveman-commit"
-destination = "skills/caveman-commit"
-license = "Apache-2.0"
-
-[[skills]]
-name = "caveman-compress"
-source = ".agents/skills/caveman-compress"
-destination = "skills/caveman-compress"
-license = "Apache-2.0"
-
-[[skills]]
-name = "caveman-help"
-source = ".agents/skills/caveman-help"
-destination = "skills/caveman-help"
-license = "Apache-2.0"
-
-[[skills]]
-name = "caveman-review"
-source = ".agents/skills/caveman-review"
-destination = "skills/caveman-review"
-license = "Apache-2.0"
-
-[[skills]]
-name = "caveman-stats"
-source = ".agents/skills/caveman-stats"
-destination = "skills/caveman-stats"
+name = "babysit-pr"
+source = "skills/babysit-pr"
+destination = "skills/babysit-pr"
 license = "Apache-2.0"
 
 [[skills]]
 name = "code-review"
-source = ".agents/skills/code-review"
+source = "skills/code-review"
 destination = "skills/code-review"
 license = "Apache-2.0"
 
 [[skills]]
-name = "codebase-design"
-source = ".agents/skills/codebase-design"
-destination = "skills/codebase-design"
+name = "code-review-breaking-changes"
+source = "skills/code-review-breaking-changes"
+destination = "skills/code-review-breaking-changes"
 license = "Apache-2.0"
 
 [[skills]]
-name = "cold-start"
-source = ".ontocode/skills/cold-start"
-destination = "skills/cold-start"
+name = "code-review-change-size"
+source = "skills/code-review-change-size"
+destination = "skills/code-review-change-size"
 license = "Apache-2.0"
 
 [[skills]]
-name = "dejank"
-source = ".ontocode/skills/dejank"
-destination = "skills/dejank"
+name = "code-review-context"
+source = "skills/code-review-context"
+destination = "skills/code-review-context"
 license = "Apache-2.0"
 
 [[skills]]
-name = "delegate-to-luna"
-source = ".ontocode/skills/.system/delegate-to-luna"
-destination = "skills/delegate-to-luna"
+name = "code-review-testing"
+source = "skills/code-review-testing"
+destination = "skills/code-review-testing"
 license = "Apache-2.0"
 
 [[skills]]
-name = "design-an-interface"
-source = ".agents/skills/design-an-interface"
-destination = "skills/design-an-interface"
+name = "codex-bug"
+source = "skills/codex-bug"
+destination = "skills/codex-bug"
 license = "Apache-2.0"
 
 [[skills]]
-name = "diagnosing-bugs"
-source = ".agents/skills/diagnosing-bugs"
-destination = "skills/diagnosing-bugs"
+name = "codex-issue-digest"
+source = "skills/codex-issue-digest"
+destination = "skills/codex-issue-digest"
 license = "Apache-2.0"
 
 [[skills]]
-name = "domain-modeling"
-source = ".agents/skills/domain-modeling"
-destination = "skills/domain-modeling"
+name = "codex-pr-body"
+source = "skills/codex-pr-body"
+destination = "skills/codex-pr-body"
 license = "Apache-2.0"
 
 [[skills]]
-name = "edit-article"
-source = ".agents/skills/edit-article"
-destination = "skills/edit-article"
+name = "ontocode-app-server"
+source = "skills/ontocode-app-server"
+destination = "skills/ontocode-app-server"
 license = "Apache-2.0"
 
 [[skills]]
-name = "excel"
-source = ".ontocode/skills/.system/excel"
-destination = "skills/excel"
+name = "ontocode-architecture"
+source = "skills/ontocode-architecture"
+destination = "skills/ontocode-architecture"
 license = "Apache-2.0"
 
 [[skills]]
-name = "faster-chrome-devtools-skill"
-source = ".ontocode/skills/faster-chrome-devtools-skill"
-destination = "skills/faster-chrome-devtools-skill"
+name = "ontocode-build"
+source = "skills/ontocode-build"
+destination = "skills/ontocode-build"
 license = "Apache-2.0"
 
 [[skills]]
-name = "find-skills"
-source = ".agents/skills/find-skills"
-destination = "skills/find-skills"
+name = "ontocode-docs"
+source = "skills/ontocode-docs"
+destination = "skills/ontocode-docs"
 license = "Apache-2.0"
 
 [[skills]]
-name = "gemini-subagent"
-source = ".agents/skills/gemini-subagent"
-destination = "skills/gemini-subagent"
+name = "ontocode-luna-workflow"
+source = "skills/ontocode-luna-workflow"
+destination = "skills/ontocode-luna-workflow"
 license = "Apache-2.0"
 
 [[skills]]
-name = "gitnexus-architecture-cycle"
-source = ".agents/skills/gitnexus-architecture-cycle"
-destination = "skills/gitnexus-architecture-cycle"
+name = "ontocode-manager-loop"
+source = "skills/ontocode-manager-loop"
+destination = "skills/ontocode-manager-loop"
 license = "Apache-2.0"
 
 [[skills]]
-name = "gitnexus-cli"
-source = ".agents/skills/gitnexus-cli"
-destination = "skills/gitnexus-cli"
+name = "ontocode-memory-bank"
+source = "skills/ontocode-memory-bank"
+destination = "skills/ontocode-memory-bank"
 license = "Apache-2.0"
 
 [[skills]]
-name = "gitnexus-codebase-auditor"
-source = ".ontocode/skills/gitnexus-codebase-auditor"
-destination = "skills/gitnexus-codebase-auditor"
+name = "ontocode-ontograph-km"
+source = "skills/ontocode-ontograph-km"
+destination = "skills/ontocode-ontograph-km"
 license = "Apache-2.0"
 
 [[skills]]
-name = "gitnexus-debugging"
-source = ".agents/skills/gitnexus-debugging"
-destination = "skills/gitnexus-debugging"
+name = "ontocode-python"
+source = "skills/ontocode-python"
+destination = "skills/ontocode-python"
 license = "Apache-2.0"
 
 [[skills]]
-name = "gitnexus-exploring"
-source = ".agents/skills/gitnexus-exploring"
-destination = "skills/gitnexus-exploring"
+name = "ontocode-release-publish"
+source = "skills/ontocode-release-publish"
+destination = "skills/ontocode-release-publish"
 license = "Apache-2.0"
 
 [[skills]]
-name = "gitnexus-guide"
-source = ".agents/skills/gitnexus-guide"
-destination = "skills/gitnexus-guide"
+name = "ontocode-rust"
+source = "skills/ontocode-rust"
+destination = "skills/ontocode-rust"
 license = "Apache-2.0"
 
 [[skills]]
-name = "gitnexus-impact-analysis"
-source = ".agents/skills/gitnexus-impact-analysis"
-destination = "skills/gitnexus-impact-analysis"
+name = "ontocode-testing"
+source = "skills/ontocode-testing"
+destination = "skills/ontocode-testing"
 license = "Apache-2.0"
 
 [[skills]]
-name = "gitnexus-intensive-codebase-auditor"
-source = ".ontocode/skills/gitnexus-intensive-codebase-auditor"
-destination = "skills/gitnexus-intensive-codebase-auditor"
+name = "ontocode-tui"
+source = "skills/ontocode-tui"
+destination = "skills/ontocode-tui"
 license = "Apache-2.0"
 
 [[skills]]
-name = "gitnexus-refactoring"
-source = ".agents/skills/gitnexus-refactoring"
-destination = "skills/gitnexus-refactoring"
+name = "remote-tests"
+source = "skills/remote-tests"
+destination = "skills/remote-tests"
 license = "Apache-2.0"
 
 [[skills]]
-name = "grill-me"
-source = ".agents/skills/grill-me"
-destination = "skills/grill-me"
+name = "simplify"
+source = "skills/simplify"
+destination = "skills/simplify"
 license = "Apache-2.0"
 
 [[skills]]
-name = "grill-with-docs"
-source = ".agents/skills/grill-with-docs"
-destination = "skills/grill-with-docs"
+name = "test-tui"
+source = "skills/test-tui"
+destination = "skills/test-tui"
 license = "Apache-2.0"
 
 [[skills]]
-name = "grilling"
-source = ".agents/skills/grilling"
-destination = "skills/grilling"
+name = "update-v8-version"
+source = "skills/update-v8-version"
+destination = "skills/update-v8-version"
 license = "Apache-2.0"
 
 [[skills]]
-name = "handoff"
-source = ".agents/skills/handoff"
-destination = "skills/handoff"
-license = "Apache-2.0"
-
-[[skills]]
-name = "imagegen"
-source = ".ontocode/skills/.system/imagegen"
-destination = "skills/imagegen"
-license = "Apache-2.0"
-
-[[skills]]
-name = "implement"
-source = ".agents/skills/implement"
-destination = "skills/implement"
-license = "Apache-2.0"
-
-[[skills]]
-name = "improve-codebase-architecture"
-source = ".agents/skills/improve-codebase-architecture"
-destination = "skills/improve-codebase-architecture"
-license = "Apache-2.0"
-
-[[skills]]
-name = "lean-ctx"
-source = ".ontocode/skills/lean-ctx"
-destination = "skills/lean-ctx"
-license = "Apache-2.0"
-
-[[skills]]
-name = "loop-me"
-source = ".agents/skills/loop-me"
-destination = "skills/loop-me"
-license = "Apache-2.0"
-
-[[skills]]
-name = "mb-execute"
-source = ".ontocode/skills/mb-execute"
-destination = "skills/mb-execute"
-license = "Apache-2.0"
-
-[[skills]]
-name = "mb-from-prd"
-source = ".ontocode/skills/mb-from-prd"
-destination = "skills/mb-from-prd"
-license = "Apache-2.0"
-
-[[skills]]
-name = "mb-garden"
-source = ".ontocode/skills/mb-garden"
-destination = "skills/mb-garden"
-license = "Apache-2.0"
-
-[[skills]]
-name = "mb-harness"
-source = ".ontocode/skills/mb-harness"
-destination = "skills/mb-harness"
-license = "Apache-2.0"
-
-[[skills]]
-name = "mb-init"
-source = ".ontocode/skills/mb-init"
-destination = "skills/mb-init"
-license = "Apache-2.0"
-
-[[skills]]
-name = "mb-map-codebase"
-source = ".ontocode/skills/mb-map-codebase"
-destination = "skills/mb-map-codebase"
-license = "Apache-2.0"
-
-[[skills]]
-name = "mb-review"
-source = ".ontocode/skills/mb-review"
-destination = "skills/mb-review"
-license = "Apache-2.0"
-
-[[skills]]
-name = "mb-verify"
-source = ".ontocode/skills/mb-verify"
-destination = "skills/mb-verify"
-license = "Apache-2.0"
-
-[[skills]]
-name = "my-agent-browser"
-source = ".ontocode/skills/my-agent-browser"
-destination = "skills/my-agent-browser"
-license = "Apache-2.0"
-
-[[skills]]
-name = "ontocode-agent-pool-supervisor"
-source = ".ontocode/skills/ontocode-agent-pool-supervisor"
-destination = "skills/ontocode-agent-pool-supervisor"
-license = "Apache-2.0"
-
-[[skills]]
-name = "ontocode-dev-report"
-source = ".ontocode/skills/ontocode-dev-report"
-destination = "skills/ontocode-dev-report"
-license = "Apache-2.0"
-
-[[skills]]
-name = "ontocode-routine-tools"
-source = ".ontocode/skills/ontocode-routine-tools"
-destination = "skills/ontocode-routine-tools"
-license = "Apache-2.0"
-
-[[skills]]
-name = "ontocode-session-log-review"
-source = ".ontocode/skills/ontocode-session-log-review"
-destination = "skills/ontocode-session-log-review"
-license = "Apache-2.0"
-
-[[skills]]
-name = "ontocode-subagent-recovery"
-source = ".ontocode/skills/ontocode-subagent-recovery"
-destination = "skills/ontocode-subagent-recovery"
-license = "Apache-2.0"
-
-[[skills]]
-name = "ontocode-tool-contract-preflight"
-source = ".ontocode/skills/ontocode-tool-contract-preflight"
-destination = "skills/ontocode-tool-contract-preflight"
-license = "Apache-2.0"
-
-[[skills]]
-name = "ontograph-km-librarian"
-source = ".ontocode/skills/.system/ontograph-km-librarian"
-destination = "skills/ontograph-km-librarian"
-license = "Apache-2.0"
-
-[[skills]]
-name = "ontoindex-cli"
-source = ".agents/skills/ontoindex-cli"
-destination = "skills/ontoindex-cli"
-license = "Apache-2.0"
-
-[[skills]]
-name = "ontoindex-debugging"
-source = ".agents/skills/ontoindex-debugging"
-destination = "skills/ontoindex-debugging"
-license = "Apache-2.0"
-
-[[skills]]
-name = "ontoindex-dev-report"
-source = ".ontocode/skills/ontoindex-dev-report"
-destination = "skills/ontoindex-dev-report"
-license = "Apache-2.0"
-
-[[skills]]
-name = "ontoindex-exploring"
-source = ".agents/skills/ontoindex-exploring"
-destination = "skills/ontoindex-exploring"
-license = "Apache-2.0"
-
-[[skills]]
-name = "ontoindex-guide"
-source = ".agents/skills/ontoindex-guide"
-destination = "skills/ontoindex-guide"
-license = "Apache-2.0"
-
-[[skills]]
-name = "ontoindex-impact-analysis"
-source = ".agents/skills/ontoindex-impact-analysis"
-destination = "skills/ontoindex-impact-analysis"
-license = "Apache-2.0"
-
-[[skills]]
-name = "ontoindex-pr-review"
-source = ".agents/skills/ontoindex-pr-review"
-destination = "skills/ontoindex-pr-review"
-license = "Apache-2.0"
-
-[[skills]]
-name = "ontoindex-refactoring"
-source = ".agents/skills/ontoindex-refactoring"
-destination = "skills/ontoindex-refactoring"
-license = "Apache-2.0"
-
-[[skills]]
-name = "openai-docs"
-source = ".ontocode/skills/.system/openai-docs"
-destination = "skills/openai-docs"
-license = "Apache-2.0"
-
-[[skills]]
-name = "playwriter"
-source = ".ontocode/skills/.system/playwriter"
-destination = "skills/playwriter"
-license = "Apache-2.0"
-
-[[skills]]
-name = "plugin-creator"
-source = ".ontocode/skills/.system/plugin-creator"
-destination = "skills/plugin-creator"
-license = "Apache-2.0"
-
-[[skills]]
-name = "ponytail"
-source = ".ontocode/skills/ponytail"
-destination = "skills/ponytail"
-license = "MIT"
-
-[[skills]]
-name = "ponytail-audit"
-source = ".ontocode/skills/ponytail-audit"
-destination = "skills/ponytail-audit"
-license = "Apache-2.0"
-
-[[skills]]
-name = "ponytail-debt"
-source = ".ontocode/skills/ponytail-debt"
-destination = "skills/ponytail-debt"
-license = "Apache-2.0"
-
-[[skills]]
-name = "ponytail-gain"
-source = ".ontocode/skills/ponytail-gain"
-destination = "skills/ponytail-gain"
-license = "Apache-2.0"
-
-[[skills]]
-name = "ponytail-help"
-source = ".ontocode/skills/ponytail-help"
-destination = "skills/ponytail-help"
-license = "Apache-2.0"
-
-[[skills]]
-name = "ponytail-review"
-source = ".ontocode/skills/ponytail-review"
-destination = "skills/ponytail-review"
-license = "Apache-2.0"
-
-[[skills]]
-name = "prototype"
-source = ".agents/skills/prototype"
-destination = "skills/prototype"
-license = "Apache-2.0"
-
-[[skills]]
-name = "python-performance-optimization"
-source = ".ontocode/skills/python-performance-optimization"
-destination = "skills/python-performance-optimization"
-license = "Apache-2.0"
-
-[[skills]]
-name = "python-pro"
-source = ".ontocode/skills/python-pro"
-destination = "skills/python-pro"
-license = "MIT"
-
-[[skills]]
-name = "python-testing-patterns"
-source = ".ontocode/skills/python-testing-patterns"
-destination = "skills/python-testing-patterns"
-license = "Apache-2.0"
-
-[[skills]]
-name = "qt-perf-monitor"
-source = ".ontocode/skills/qt-perf-monitor"
-destination = "skills/qt-perf-monitor"
-license = "Apache-2.0"
-
-[[skills]]
-name = "request-refactor-plan"
-source = ".agents/skills/request-refactor-plan"
-destination = "skills/request-refactor-plan"
-license = "Apache-2.0"
-
-[[skills]]
-name = "research"
-source = ".agents/skills/research"
-destination = "skills/research"
-license = "Apache-2.0"
-
-[[skills]]
-name = "rust-skills"
-source = ".ontocode/skills/rust-skills"
-destination = "skills/rust-skills"
-license = "MIT"
-
-[[skills]]
-name = "session-issue-diagnostics"
-source = ".ontocode/skills/.system/session-issue-diagnostics"
-destination = "skills/session-issue-diagnostics"
-license = "Apache-2.0"
-
-[[skills]]
-name = "setup-matt-pocock-skills"
-source = ".agents/skills/setup-matt-pocock-skills"
-destination = "skills/setup-matt-pocock-skills"
-license = "Apache-2.0"
-
-[[skills]]
-name = "skill-creator"
-source = ".ontocode/skills/.system/skill-creator"
-destination = "skills/skill-creator"
-license = "Apache-2.0"
-
-[[skills]]
-name = "skill-installer"
-source = ".ontocode/skills/.system/skill-installer"
-destination = "skills/skill-installer"
-license = "Apache-2.0"
-
-[[skills]]
-name = "tdd"
-source = ".agents/skills/tdd"
-destination = "skills/tdd"
-license = "Apache-2.0"
-
-[[skills]]
-name = "teach"
-source = ".agents/skills/teach"
-destination = "skills/teach"
-license = "Apache-2.0"
-
-[[skills]]
-name = "to-issues"
-source = ".agents/skills/to-issues"
-destination = "skills/to-issues"
-license = "Apache-2.0"
-
-[[skills]]
-name = "to-prd"
-source = ".agents/skills/to-prd"
-destination = "skills/to-prd"
-license = "Apache-2.0"
-
-[[skills]]
-name = "triage"
-source = ".agents/skills/triage"
-destination = "skills/triage"
-license = "Apache-2.0"
-
-[[skills]]
-name = "update-project-memory"
-source = ".ontocode/skills/.system/update-project-memory"
-destination = "skills/update-project-memory"
-license = "Apache-2.0"
-
-[[skills]]
-name = "writing-beats"
-source = ".agents/skills/writing-beats"
-destination = "skills/writing-beats"
-license = "Apache-2.0"
-
-[[skills]]
-name = "writing-fragments"
-source = ".agents/skills/writing-fragments"
-destination = "skills/writing-fragments"
-license = "Apache-2.0"
-
-[[skills]]
-name = "writing-great-skills"
-source = ".agents/skills/writing-great-skills"
-destination = "skills/writing-great-skills"
-license = "Apache-2.0"
-
-[[skills]]
-name = "writing-shape"
-source = ".agents/skills/writing-shape"
-destination = "skills/writing-shape"
+name = "upstream-codex-sync"
+source = "skills/upstream-codex-sync"
+destination = "skills/upstream-codex-sync"
 license = "Apache-2.0"
 
 [[agents]]
 name = "axel-artifact-worker"
-source = ".ontocode/agents/axel-artifact-worker.toml"
+source = "agents/axel-artifact-worker.toml"
 destination = "agents/axel-artifact-worker.toml"
 license = "Apache-2.0"
 
 [[agents]]
 name = "axel-formula-analyst"
-source = ".ontocode/agents/axel-formula-analyst.toml"
+source = "agents/axel-formula-analyst.toml"
 destination = "agents/axel-formula-analyst.toml"
 license = "Apache-2.0"
 
 [[agents]]
 name = "axel-inspector"
-source = ".ontocode/agents/axel-inspector.toml"
+source = "agents/axel-inspector.toml"
 destination = "agents/axel-inspector.toml"
 license = "Apache-2.0"
 
 [[agents]]
 name = "axel-migration-consolidator"
-source = ".ontocode/agents/axel-migration-consolidator.toml"
+source = "agents/axel-migration-consolidator.toml"
 destination = "agents/axel-migration-consolidator.toml"
 license = "Apache-2.0"
 
 [[agents]]
 name = "axel-powerquery-reviewer"
-source = ".ontocode/agents/axel-powerquery-reviewer.toml"
+source = "agents/axel-powerquery-reviewer.toml"
 destination = "agents/axel-powerquery-reviewer.toml"
 license = "Apache-2.0"
 
 [[agents]]
 name = "axel-vba-reviewer"
-source = ".ontocode/agents/axel-vba-reviewer.toml"
+source = "agents/axel-vba-reviewer.toml"
 destination = "agents/axel-vba-reviewer.toml"
 license = "Apache-2.0"
 
 [[agents]]
 name = "axel-verifier"
-source = ".ontocode/agents/axel-verifier.toml"
+source = "agents/axel-verifier.toml"
 destination = "agents/axel-verifier.toml"
 license = "Apache-2.0"
 
 [[agents]]
 name = "cdr-auditor"
-source = ".ontocode/agents/cdr-auditor.toml"
+source = "agents/cdr-auditor.toml"
 destination = "agents/cdr-auditor.toml"
 license = "Apache-2.0"
 
 [[agents]]
 name = "cdr-debug"
-source = ".ontocode/agents/cdr-debug.toml"
+source = "agents/cdr-debug.toml"
 destination = "agents/cdr-debug.toml"
 license = "Apache-2.0"
 
 [[agents]]
 name = "cdr-manager"
-source = ".ontocode/agents/cdr-manager.toml"
+source = "agents/cdr-manager.toml"
 destination = "agents/cdr-manager.toml"
 license = "Apache-2.0"
 
 [[agents]]
 name = "cdr-performance"
-source = ".ontocode/agents/cdr-performance.toml"
+source = "agents/cdr-performance.toml"
 destination = "agents/cdr-performance.toml"
 license = "Apache-2.0"
 
 [[agents]]
-name = "cdr-worker-test-challenger"
-source = ".ontocode/agents/cdr-worker-test-challenger.toml"
-destination = "agents/cdr-worker-test-challenger.toml"
-license = "Apache-2.0"
-
-[[agents]]
 name = "cdr-worker"
-source = ".ontocode/agents/cdr-worker.toml"
+source = "agents/cdr-worker.toml"
 destination = "agents/cdr-worker.toml"
 license = "Apache-2.0"
 
 [[agents]]
+name = "cdr-worker-test-challenger"
+source = "agents/cdr-worker-test-challenger.toml"
+destination = "agents/cdr-worker-test-challenger.toml"
+license = "Apache-2.0"
+
+[[agents]]
 name = "council-consolidator"
-source = ".ontocode/agents/council-consolidator.toml"
+source = "agents/council-consolidator.toml"
 destination = "agents/council-consolidator.toml"
 license = "Apache-2.0"
 
 [[agents]]
 name = "council-manager"
-source = ".ontocode/agents/council-manager.toml"
+source = "agents/council-manager.toml"
 destination = "agents/council-manager.toml"
 license = "Apache-2.0"
 
 [[agents]]
 name = "council-panelist"
-source = ".ontocode/agents/council-panelist.toml"
+source = "agents/council-panelist.toml"
 destination = "agents/council-panelist.toml"
 license = "Apache-2.0"
 
 [[agents]]
+name = "librarian"
+source = "agents/librarian.toml"
+destination = "agents/librarian.toml"
+license = "Apache-2.0"
+
+[[agents]]
 name = "librarian-manager"
-source = ".ontocode/agents/librarian-manager.toml"
+source = "agents/librarian-manager.toml"
 destination = "agents/librarian-manager.toml"
 license = "Apache-2.0"
 
 [[agents]]
 name = "librarian-reviewer"
-source = ".ontocode/agents/librarian-reviewer.toml"
+source = "agents/librarian-reviewer.toml"
 destination = "agents/librarian-reviewer.toml"
 license = "Apache-2.0"
 
 [[agents]]
 name = "librarian-worker"
-source = ".ontocode/agents/librarian-worker.toml"
+source = "agents/librarian-worker.toml"
 destination = "agents/librarian-worker.toml"
 license = "Apache-2.0"
 
 [[agents]]
-name = "librarian"
-source = ".ontocode/agents/librarian.toml"
-destination = "agents/librarian.toml"
-license = "Apache-2.0"
-
-[[agents]]
-name = "md-architector"
-source = ".ontocode/agents/md-architector.toml"
-destination = "agents/md-architector.toml"
-license = "Apache-2.0"
-
-[[agents]]
-name = "md-plan-reviewer"
-source = ".ontocode/agents/md-plan-reviewer.toml"
-destination = "agents/md-plan-reviewer.toml"
-license = "Apache-2.0"
-
-[[agents]]
 name = "md-plans-architect"
-source = ".ontocode/agents/md-plans-architect.toml"
+source = "agents/md-plans-architect.toml"
 destination = "agents/md-plans-architect.toml"
 license = "Apache-2.0"
 
 [[agents]]
 name = "md-plans-challenger"
-source = ".ontocode/agents/md-plans-challenger.toml"
+source = "agents/md-plans-challenger.toml"
 destination = "agents/md-plans-challenger.toml"
 license = "Apache-2.0"
 
 [[agents]]
 name = "md-plans-manager"
-source = ".ontocode/agents/md-plans-manager.toml"
+source = "agents/md-plans-manager.toml"
 destination = "agents/md-plans-manager.toml"
 license = "Apache-2.0"
 
 [[agents]]
 name = "md-plans-requirements"
-source = ".ontocode/agents/md-plans-requirements.toml"
+source = "agents/md-plans-requirements.toml"
 destination = "agents/md-plans-requirements.toml"
 license = "Apache-2.0"
 
 [[agents]]
 name = "md-plans-validator"
-source = ".ontocode/agents/md-plans-validator.toml"
+source = "agents/md-plans-validator.toml"
 destination = "agents/md-plans-validator.toml"
 license = "Apache-2.0"

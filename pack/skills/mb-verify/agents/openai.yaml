@@ -1,4 +1,0 @@
-interface:
-  display_name: "Memory Bank Verify"
-  short_description: "Verify tasks with reproducible evidence"
-  default_prompt: "Use $mb-verify to verify this task against its acceptance criteria and repository-specific gates."

@@ -1,4 +1,0 @@
-interface:
-  display_name: "Delegate to Luna"
-  short_description: "Route bounded implementation work to Luna"
-  default_prompt: "Use $delegate-to-luna to scope and dispatch this bounded implementation task to luna_worker."

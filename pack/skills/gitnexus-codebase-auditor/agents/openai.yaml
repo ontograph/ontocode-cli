@@ -1,7 +1,0 @@
-interface:
-  display_name: "GitNexus Codebase Auditor"
-  short_description: "Audit codebases with GitNexus tools"
-  default_prompt: "Use $gitnexus-codebase-auditor to audit this codebase with GitNexus, verify findings against target HEAD, dedupe root causes, prepare scoped bundles, and report evidence plus next actions."
-
-policy:
-  allow_implicit_invocation: true

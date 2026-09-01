@@ -1,4 +1,0 @@
-interface:
-  display_name: "Axel Plan Autopilot"
-  short_description: "Run Axel project plans to a real stop"
-  default_prompt: "Use $axel-plan-autopilot to validate the active Axel task packet, account for bounded recoveries, and continue its strict manager loop."

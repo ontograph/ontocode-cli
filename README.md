@@ -18,7 +18,7 @@ curl -fsSL https://raw.githubusercontent.com/ontograph/ontocode-cli/main/scripts
 Pin the current release explicitly:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/ontograph/ontocode-cli/main/scripts/install/install.sh | sh -s -- --release 0.4.2.5
+curl -fsSL https://raw.githubusercontent.com/ontograph/ontocode-cli/main/scripts/install/install.sh | sh -s -- --release 0.4.2.6
 ```
 
 The installer supports Linux x86_64, verifies the binary and project-plan
@@ -29,7 +29,7 @@ See [docs/install.md](docs/install.md) for requirements and options.
 
 The agent definitions and skills ship as a content pack, released separately
 from the CLI so they can be updated without reinstalling the binary. The
-current pack is `content-pack-v3` and contains 27 agents and 131 skills.
+current pack is `content-pack-v5` and contains 25 agents and 27 skills.
 
 Install into Ontocode home:
 
@@ -44,7 +44,7 @@ curl -fsSL https://raw.githubusercontent.com/ontograph/ontocode-cli/main/scripts
 ```
 
 Without `--release` the installer selects the newest content pack. Pass
-`--release content-pack-v3` to pin the current pack.
+`--release content-pack-v5` to pin the current pack.
 
 Home installs land in `$ONTOCODE_HOME/skills` and `$ONTOCODE_HOME/agents`,
 defaulting to `~/.ontocode`. Project installs land in `.agents/skills` and
@@ -58,16 +58,16 @@ Release scope:
 - unsigned Linux release binary first
 - macOS, Windows, and platform npm packages later when needed
 
-Current internal development prerelease: `0.4.2.5` (`rust-v0.4.2.5`). Its Cargo
-package and machine-readable CLI version is `0.4.2+5`, while GitHub release
+Current internal development prerelease: `0.4.2.6` (`rust-v0.4.2.6`). Its Cargo
+package and machine-readable CLI version is `0.4.2+6`, while GitHub release
 tags, installer inputs, and asset names use the human release identity
-`0.4.2.5`.
+`0.4.2.6`.
 
 All releases are listed on the
 [releases page](https://github.com/ontograph/ontocode-cli/releases). The
 changelog is in [CHANGELOG.md](CHANGELOG.md).
 Per-release notes are kept in [docs/releases](docs/releases).
-See the [0.4.2.5 release notes](docs/releases/v0.4.2.5.md).
+See the [0.4.2.6 release notes](docs/releases/v0.4.2.6.md).
 
 Content packs are versioned independently of the CLI and use `content-pack-v*`
 tags.
