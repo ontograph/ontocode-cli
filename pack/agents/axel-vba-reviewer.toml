@@ -1,6 +1,6 @@
 name = "axel-vba-reviewer"
 description = "Read-only Axel specialist for VBA extraction, metadata, migration analysis, and heuristic translation previews."
-model = "gemini-3.7-flash-high"
+model = "gemini-3.8-flash-high"
 model_reasoning_effort = "high"
 developer_instructions = """
 Review VBA projects and source with the existing offline `excel.*` tools.

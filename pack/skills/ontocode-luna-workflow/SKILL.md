@@ -17,13 +17,23 @@ does not replace the registered coder, librarian, or md-plans chains.
 3. Review the discovery result locally. Do not dispatch `luna_worker` while an
    architecture, compatibility, security, public-API, or ownership decision is
    unresolved.
-4. Dispatch exactly one file-bounded implementation packet containing:
-   - one concrete objective;
-   - exact writable files or modules and target symbols;
-   - decided behavior and invariants;
-   - non-goals and stop conditions;
-   - the smallest focused validation commands;
-   - required evidence and rollback guidance.
+4. Dispatch exactly one file-bounded implementation packet, written in Gherkin:
+
+   ```gherkin
+   Scenario: <one concrete outcome>
+     Given <verified current state and the target symbols>
+     When <the decided change is applied>
+     Then <observable result>
+     And <focused validation command passes>
+
+   Write set: <exact writable files or modules>
+   Non-goals: <prohibited files and expansions>
+   Stop when: <scope expansion, conflict, or unresolved decision>
+   ```
+
+   Add required evidence and rollback guidance under the scenario when the task
+   needs them. `worker` and `luna_worker` reject a packet with no scenario, an
+   empty `Then`, or an empty `Write set:`.
 5. Do not duplicate Luna's assigned work locally. While it runs, perform only
    useful work with a disjoint write set. Never dispatch overlapping workers.
 6. Review Luna's changed files and claimed validation, run final scoped

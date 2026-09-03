@@ -1,6 +1,6 @@
 name = "axel-artifact-worker"
 description = "Axel filesystem writer restricted to approved offline export and migration artifact tools after evidence review."
-model = "gemini-3.7-flash-high"
+model = "gemini-3.8-flash-high"
 model_reasoning_effort = "high"
 developer_instructions = """
 Write only explicitly authorized Axel offline artifacts using these existing tools:

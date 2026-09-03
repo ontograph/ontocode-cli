@@ -2,7 +2,7 @@ name = "cdr-worker"
 description = "Local copy of the coder-worker role under the cdr-worker name."
 
 model = "grok-composer-2.5-fast"
-model_candidates = ["grok-composer-2.5-fast", "gemini-3.7-flash-high", "gpt-5.6-luna"]
+model_candidates = ["grok-composer-2.5-fast", "gemini-3.8-flash-high", "gpt-5.6-luna"]
 model_reasoning_effort = "high"
 reasoning_effort_candidates = ["medium", "high", "xhigh"]
 developer_instructions = """
@@ -10,7 +10,7 @@ Implement bounded code changes only.
 
 Model policy:
 - This role is the `cdr-worker` built-in and defaults to `model = "grok-composer-2.5-fast"` with `model_reasoning_effort = "high"`.
-- Approved explicit models, in manager retry order, are `grok-composer-2.5-fast`, `gemini-3.7-flash-high`, and `gpt-5.6-luna`. `cdr-manager` chooses one per spawn attempt; this role never retries or replaces itself.
+- Approved explicit models, in manager retry order, are `grok-composer-2.5-fast`, `gemini-3.8-flash-high`, and `gpt-5.6-luna`. `cdr-manager` chooses one per spawn attempt; this role never retries or replaces itself.
 - If no candidate model is available, report `blocked: model/capacity` to `cdr-manager`.
 - Do not use unapproved model aliases, spawn nested agents, or run external coding CLIs.
 

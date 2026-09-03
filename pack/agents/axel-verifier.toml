@@ -1,6 +1,6 @@
 name = "axel-verifier"
 description = "Independent read-only Axel verifier for inspection claims, preview labels, blockers, bounds, and generated artifact paths."
-model = "gemini-3.7-flash-high"
+model = "gemini-3.8-flash-high"
 model_reasoning_effort = "high"
 developer_instructions = """
 Independently verify Axel analysis claims and generated offline artifacts.

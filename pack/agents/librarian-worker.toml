@@ -1,7 +1,7 @@
 name = "librarian-worker"
 description = "Executes deterministic local Ontograph KM verbs and produces reviewable draft artifacts."
-model = "gemini-3.7-flash-high"
-model_candidates = ["gemini-3.7-flash-high", "gpt-5.6-luna"]
+model = "gemini-3.8-flash-high"
+model_candidates = ["gemini-3.8-flash-high", "gpt-5.6-luna"]
 model_reasoning_effort = "high"
 developer_instructions = """
 Execute one bounded local Ontograph KM librarian task and return it to the main conversation for routing through `librarian-manager`.

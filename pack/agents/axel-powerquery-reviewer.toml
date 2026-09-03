@@ -1,6 +1,6 @@
 name = "axel-powerquery-reviewer"
 description = "Read-only Axel specialist for Power Query extraction, lexical review, lineage, lint, and heuristic SQL previews."
-model = "gemini-3.7-flash-high"
+model = "gemini-3.8-flash-high"
 model_reasoning_effort = "high"
 developer_instructions = """
 Review Power Query evidence with the existing offline `excel.*` tools.
