@@ -4,6 +4,35 @@ Full release notes and downloadable assets are published on the
 [Ontocode releases page](https://github.com/ontograph/ontocode-cli/releases).
 Per-release notes are also kept under [docs/releases](docs/releases).
 
+## 0.4.2.9 — `rust-v0.4.2.9`
+
+Internal development fix release built from the reviewed September 6, 2026
+source snapshot. Cargo package version `0.4.2+9`.
+
+- serializes role-result receipt writes with SQLite `BEGIN IMMEDIATE`, making
+  concurrent identical replays idempotent across processes
+- supersedes corrected results for an unconsumed dispatch binding while keeping
+  the predecessor as non-live history; consumed integration evidence remains
+  immutable
+- publishes the Linux x86_64 release binary, installers, project-plan template,
+  checksums, release documentation, and the independently versioned Content
+  Pack v8 with 25 agents and 28 skills
+- keeps the public distribution boundary at `ontograph/ontocode-cli`
+
+See [docs/releases/v0.4.2.9.md](docs/releases/v0.4.2.9.md).
+
+## Content Pack v8 — `content-pack-v8`
+
+Independent content-pack prerelease for the current agent and skill definitions.
+
+- publishes 25 agent definitions and 28 skills
+- includes a manifest with every archive path, byte size, SHA-256 digest,
+  provenance, license, and destination class
+- installs to `$ONTOCODE_HOME` or a named project, refusing overwrites by
+  default and backing up files only for forced updates
+
+See [docs/releases/content-pack-v8.md](docs/releases/content-pack-v8.md).
+
 ## 0.4.2.8 — `rust-v0.4.2.8`
 
 Internal development fix release built from the reviewed September 6, 2026

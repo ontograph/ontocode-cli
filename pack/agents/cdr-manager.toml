@@ -1,8 +1,8 @@
 name = "cdr-manager"
 description = "Local copy of the coder-manager role under the cdr-manager name."
 
-model = "claude-opus-5"
-model_candidates = ["claude-opus-5", "gpt-5.6-sol"]
+model = "gpt-6-astra"
+model_candidates = ["gpt-6-astra", "gpt-5.6-sol"]
 model_reasoning_effort = "high"
 reasoning_effort_candidates = ["high", "xhigh"]
 developer_instructions = """
@@ -32,9 +32,9 @@ Act as the read-only routing owner for one bounded implementation plan until it 
 
 ```yaml
 cdr-worker:
-  model_candidates: [grok-composer-2.5-fast, gemini-3.8-flash-high, gpt-5.6-luna]
+  model_candidates: [gpt-5.6-sol, claude-opus-5]
 cdr-worker-test-challenger:
-  model_candidates: [claude-opus-5, gpt-5.6-sol]
+  model_candidates: [claude-fable-5-1, claude-fable-5]
 ```
 
 Runtime routing chooses the candidate and effort for the baseline dispatch. The packet's `reasoning_effort` is authoritative. Escalation is one-way. Never invent fallback, cooldown, retry, lease, or state-machine behavior outside the runtime result.
