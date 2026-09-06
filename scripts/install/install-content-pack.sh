@@ -41,7 +41,7 @@ case "$SCOPE" in
   *) echo "Scope must be home or project." >&2; exit 2 ;;
 esac
 
-for command_name in curl tar sha256sum awk mktemp install cp mkdir chmod basename dirname sed head mv; do
+for command_name in curl tar sha256sum awk mktemp install cp mkdir chmod basename dirname sed grep sort tail mv; do
   command -v "$command_name" >/dev/null 2>&1 || { echo "$command_name is required." >&2; exit 1; }
 done
 
@@ -63,7 +63,8 @@ if [ -z "$RELEASE" ] || [ "$RELEASE" = "latest" ]; then
   tag="$(curl -fsSL "https://api.github.com/repos/$REPO/releases?per_page=100" \
     | sed -n 's/.*"tag_name":[[:space:]]*"\([^"]*\)".*/\1/p' \
     | grep '^content-pack-' \
-    | head -n 1)"
+    | sort -V \
+    | tail -n 1)"
   [ -n "$tag" ] || { echo "No content-pack release found in $REPO." >&2; exit 1; }
 else
   tag="$(resolve_tag "$RELEASE")"

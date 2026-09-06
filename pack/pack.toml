@@ -1,9 +1,9 @@
 schema_version = 1
 name = "ontocode-agents-and-skills"
-version = "6"
+version = "7"
 license = "Apache-2.0"
-source_commit = "c48fe05811d261ed2236dcf89afbb38bc70c6bae"
-repository_source_commit = "c48fe05811d261ed2236dcf89afbb38bc70c6bae"
+source_commit = "5aaa68fd2ca919c70cf4ebf989af4baa8a42dc8f"
+repository_source_commit = "5aaa68fd2ca919c70cf4ebf989af4baa8a42dc8f"
 definitions_source = "external-definitions-root"
 
 [[skills]]
@@ -136,6 +136,12 @@ license = "Apache-2.0"
 name = "ontocode-tui"
 source = "skills/ontocode-tui"
 destination = "skills/ontocode-tui"
+license = "Apache-2.0"
+
+[[skills]]
+name = "personas"
+source = "skills/personas"
+destination = "skills/personas"
 license = "Apache-2.0"
 
 [[skills]]
