@@ -1,9 +1,9 @@
 schema_version = 1
 name = "ontocode-agents-and-skills"
-version = "8"
+version = "9"
 license = "Apache-2.0"
-source_commit = "1981731f6751c74bd3a25c3b35a30be367b28722"
-repository_source_commit = "1981731f6751c74bd3a25c3b35a30be367b28722"
+source_commit = "d102172e7c199ca79bb1af884963455e5394feb9"
+repository_source_commit = "d102172e7c199ca79bb1af884963455e5394feb9"
 definitions_source = "external-definitions-root"
 
 [[skills]]

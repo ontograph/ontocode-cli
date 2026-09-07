@@ -4,6 +4,35 @@ Full release notes and downloadable assets are published on the
 [Ontocode releases page](https://github.com/ontograph/ontocode-cli/releases).
 Per-release notes are also kept under [docs/releases](docs/releases).
 
+## 0.4.2.10 — `rust-v0.4.2.10`
+
+Internal development fix release built from the reviewed September 7, 2026
+source snapshot. Cargo package version `0.4.2+10`.
+
+- rejects superseded role-result integration receipts before validation or
+  tracking mutation, preventing corrected-result history from being applied
+  twice
+- adds regression coverage for rejection and byte-for-byte tracking-file
+  preservation
+- publishes the Linux x86_64 release binary, installers, project-plan template,
+  checksums, release documentation, and Content Pack v9 with 25 agents and 28
+  skills
+- keeps the public distribution boundary at `ontograph/ontocode-cli`
+
+See [docs/releases/v0.4.2.10.md](docs/releases/v0.4.2.10.md).
+
+## Content Pack v9 — `content-pack-v9`
+
+Independent content-pack prerelease for the current agent and skill definitions.
+
+- publishes 25 agent definitions and 28 skills
+- includes a manifest with archive paths, sizes, SHA-256 digests, provenance,
+  licenses, and destination classes
+- installs to `$ONTOCODE_HOME` or a named project, refusing overwrites by
+  default
+
+See [docs/releases/content-pack-v9.md](docs/releases/content-pack-v9.md).
+
 ## 0.4.2.9 — `rust-v0.4.2.9`
 
 Internal development fix release built from the reviewed September 6, 2026
