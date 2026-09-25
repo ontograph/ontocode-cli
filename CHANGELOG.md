@@ -4,6 +4,22 @@ Full release notes and downloadable assets are published on the
 [Ontocode releases page](https://github.com/ontograph/ontocode-cli/releases).
 Per-release notes are also kept under [docs/releases](docs/releases).
 
+## 0.4.2.12 — `rust-v0.4.2.12`
+
+Internal development fix release built from the reviewed September 24, 2026
+source snapshot. Cargo package version `0.4.2+12`.
+
+- includes the manager-loop wait-state and dispatch validation fixes from the
+  authorized source snapshot
+- adds the RMCP client test dependency required by the process-group cleanup
+  regression tests
+- publishes the Linux x86_64 release binary, CLI installer, project-plan
+  template, checksums, and release documentation
+- keeps Content Pack v9 independently versioned under `content-pack-v9`
+- keeps the public distribution boundary at `ontograph/ontocode-cli`
+
+See [docs/releases/v0.4.2.12.md](docs/releases/v0.4.2.12.md).
+
 ## 0.4.2.10 — `rust-v0.4.2.10`
 
 Internal development fix release built from the reviewed September 7, 2026
