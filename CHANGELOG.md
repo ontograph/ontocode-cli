@@ -4,6 +4,15 @@ Full release notes and downloadable assets are published on the
 [Ontocode releases page](https://github.com/ontograph/ontocode-cli/releases).
 Per-release notes are also kept under [docs/releases](docs/releases).
 
+## 0.4.2.14 — `rust-v0.4.2.14`
+
+- Adds bounded whole-item Rust evidence and request-local parse caching.
+- Preserves valid extracted facts while retaining fallback for invalid mappings.
+- Includes skill-search regression coverage and lint fixes.
+- Publishes the Linux x86_64 binary, installer, template, checksums and release notes.
+
+See [docs/releases/v0.4.2.14.md](docs/releases/v0.4.2.14.md).
+
 ## 0.4.2.12 — `rust-v0.4.2.12`
 
 Internal development fix release built from the reviewed September 24, 2026
