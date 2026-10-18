@@ -4,7 +4,7 @@
 
 | Requirement                 | Details                                                         |
 | --------------------------- | --------------------------------------------------------------- |
-| Operating systems           | macOS 12+, Ubuntu 20.04+/Debian 10+, or Windows 11 **via WSL2** |
+| Published binary            | Linux x86_64; Ubuntu 20.04+/Debian 10+, including WSL2 |
 | Git (optional, recommended) | 2.23+ for built-in PR helpers                                   |
 | RAM                         | 4-GB minimum (8-GB recommended)                                 |
 
@@ -17,11 +17,11 @@ and project-plan template against `SHA256SUMS`:
 curl -fsSL https://raw.githubusercontent.com/ontograph/ontocode-cli/main/scripts/install/install.sh | sh
 ```
 
-Pin the current release explicitly with `--release 0.4.2.14`.
+Pin the current release explicitly with `--release 0.4.2.15`.
 
 Release identity note: GitHub tags, installer inputs, and asset names use the
-human release identity such as `0.4.2.10`, while the CLI reports the
-machine-readable Cargo version such as `0.4.2+10`.
+human release identity such as `0.4.2.15`, while the CLI reports the
+machine-readable Cargo version such as `0.4.2+15`.
 
 ### Install the optional content pack
 

@@ -18,7 +18,7 @@ curl -fsSL https://raw.githubusercontent.com/ontograph/ontocode-cli/main/scripts
 Pin the current release explicitly:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/ontograph/ontocode-cli/main/scripts/install/install.sh | sh -s -- --release 0.4.2.14
+curl -fsSL https://raw.githubusercontent.com/ontograph/ontocode-cli/main/scripts/install/install.sh | sh -s -- --release 0.4.2.15
 ```
 
 The installer supports Linux x86_64, verifies the binary and project-plan
@@ -58,16 +58,16 @@ Release scope:
 - unsigned Linux release binary first
 - macOS, Windows, and platform npm packages later when needed
 
-Current internal development prerelease: `0.4.2.14` (`rust-v0.4.2.14`). Its Cargo
-package and machine-readable CLI version is `0.4.2+14`, while GitHub release
+Current internal development prerelease: `0.4.2.15` (`rust-v0.4.2.15`). Its Cargo
+package and machine-readable CLI version is `0.4.2+15`, while GitHub release
 tags, installer inputs, and asset names use the human release identity
-`0.4.2.14`.
+`0.4.2.15`.
 
 All releases are listed on the
 [releases page](https://github.com/ontograph/ontocode-cli/releases). The
 changelog is in [CHANGELOG.md](CHANGELOG.md).
 Per-release notes are kept in [docs/releases](docs/releases).
-See the [0.4.2.14 release notes](docs/releases/v0.4.2.14.md).
+See the [0.4.2.15 release notes](docs/releases/v0.4.2.15.md).
 
 Content packs are versioned independently of the CLI and use `content-pack-v*`
 tags.

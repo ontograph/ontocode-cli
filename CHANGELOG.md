@@ -4,6 +4,15 @@ Full release notes and downloadable assets are published on the
 [Ontocode releases page](https://github.com/ontograph/ontocode-cli/releases).
 Per-release notes are also kept under [docs/releases](docs/releases).
 
+## 0.4.2.15 — `rust-v0.4.2.15`
+
+- Adds a bounded optional per-file workspace capture limit while retaining defaults.
+- Rejects invalid declarations and retains aggregate evidence limits.
+- Includes parser, compatibility and capture-boundary regression coverage.
+- Publishes the Linux x86_64 binary, installers, template, checksums and release notes.
+
+See [docs/releases/v0.4.2.15.md](docs/releases/v0.4.2.15.md).
+
 ## 0.4.2.14 — `rust-v0.4.2.14`
 
 - Adds bounded whole-item Rust evidence and request-local parse caching.
