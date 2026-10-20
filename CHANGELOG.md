@@ -4,6 +4,15 @@ Full release notes and downloadable assets are published on the
 [Ontocode releases page](https://github.com/ontograph/ontocode-cli/releases).
 Per-release notes are also kept under [docs/releases](docs/releases).
 
+## 1.0.0 — `rust-v1.0.0`
+
+- Preserves complete session records during large interrupted-write recovery.
+- Strengthens provider history, repeated-poll protection and execution handling.
+- Improves MCP recovery and plan/tool argument validation coverage.
+- Publishes the Linux x86_64 binary, installers, template and checksums.
+
+See [docs/releases/v1.0.0.md](docs/releases/v1.0.0.md).
+
 ## 0.4.2.15 — `rust-v0.4.2.15`
 
 - Adds a bounded optional per-file workspace capture limit while retaining defaults.
