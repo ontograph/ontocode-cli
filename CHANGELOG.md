@@ -4,6 +4,15 @@ Full release notes and downloadable assets are published on the
 [Ontocode releases page](https://github.com/ontograph/ontocode-cli/releases).
 Per-release notes are also kept under [docs/releases](docs/releases).
 
+## 1.1.4 — `rust-v1.1.4`
+
+- Accepts mixed function/custom-tool exchanges in compatible Responses requests.
+- Preserves typed call identity, payloads and call-order output normalization.
+- Retains malformed-history and user/developer boundary rejection.
+- Publishes the Linux x86_64 binary, installers, template and checksums.
+
+See [docs/releases/v1.1.4.md](docs/releases/v1.1.4.md).
+
 ## 1.1.3 — `rust-v1.1.3`
 
 - Preserves structured custom-tool history and successful policy-retry exchanges.
