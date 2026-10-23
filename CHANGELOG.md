@@ -4,6 +4,16 @@ Full release notes and downloadable assets are published on the
 [Ontocode releases page](https://github.com/ontograph/ontocode-cli/releases).
 Per-release notes are also kept under [docs/releases](docs/releases).
 
+## 1.1.3 — `rust-v1.1.3`
+
+- Preserves structured custom-tool history and successful policy-retry exchanges.
+- Improves native provider history and terminal-error retry classification.
+- Includes bounded, redacted subagent results and source-bound graph evidence.
+- Adds bounded waiting for detached validation receipts.
+- Publishes the Linux x86_64 binary, installers, template and checksums.
+
+See [docs/releases/v1.1.3.md](docs/releases/v1.1.3.md).
+
 ## 1.0.0 — `rust-v1.0.0`
 
 - Preserves complete session records during large interrupted-write recovery.
