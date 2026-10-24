@@ -17,10 +17,10 @@ and project-plan template against `SHA256SUMS`:
 curl -fsSL https://raw.githubusercontent.com/ontograph/ontocode-cli/main/scripts/install/install.sh | sh
 ```
 
-Pin the current release explicitly with `--release 1.1.4`.
+Pin the current release explicitly with `--release 1.1.5`.
 
-The release tag is `rust-v1.1.4`; the installer input, asset names and CLI
-version use `1.1.4`.
+The release tag is `rust-v1.1.5`; the installer input, asset names and CLI
+version use `1.1.5`.
 
 ### Install the optional content pack
 

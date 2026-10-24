@@ -4,6 +4,15 @@ Full release notes and downloadable assets are published on the
 [Ontocode releases page](https://github.com/ontograph/ontocode-cli/releases).
 Per-release notes are also kept under [docs/releases](docs/releases).
 
+## 1.1.5 — `rust-v1.1.5`
+
+- Resolves model selectors by family, so roles and routing survive model upgrades.
+- Stops `wait_agent` from re-reporting a recorded sub-agent rejection in a loop.
+- Keeps tool exchanges valid across interleaving, exact retries and cancellations.
+- Publishes the Linux x86_64 binary, installers, template and checksums.
+
+See [docs/releases/v1.1.5.md](docs/releases/v1.1.5.md).
+
 ## 1.1.4 — `rust-v1.1.4`
 
 - Accepts mixed function/custom-tool exchanges in compatible Responses requests.
