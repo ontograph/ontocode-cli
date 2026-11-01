@@ -4,6 +4,18 @@ Full release notes and downloadable assets are published on the
 [Ontocode releases page](https://github.com/ontograph/ontocode-cli/releases).
 Per-release notes are also kept under [docs/releases](docs/releases).
 
+## 1.1.7 — `rust-v1.1.7`
+
+- Adds call-site lines to Ontograph impact results.
+- Improves Linux sandbox temporary-target isolation and cleanup.
+- Updates bytes, lru, constant_time_eq, and tracing-test dependencies.
+- Improves temporary-directory and asynchronous test isolation.
+- Redirects the model after repeated identical tool failures.
+- Records manager-loop integration observations and workspace checkpoints.
+- Adds an opt-in decisions API smoke pilot.
+
+See [docs/releases/v1.1.7.md](docs/releases/v1.1.7.md).
+
 ## 1.1.6 — `rust-v1.1.6`
 
 - Keeps prompt history valid around hosted tool-search outputs that precede their call.
