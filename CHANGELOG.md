@@ -4,6 +4,16 @@ Full release notes and downloadable assets are published on the
 [Ontocode releases page](https://github.com/ontograph/ontocode-cli/releases).
 Per-release notes are also kept under [docs/releases](docs/releases).
 
+## 1.1.8 — `rust-v1.1.8`
+
+- Starts sessions with full access and no approval prompts when nothing is selected; explicit settings and managed requirements still apply.
+- Keeps the contained workspace profile as the default when a managed network requirement is present.
+- Archives truncated exec output and stops dropping local terminal output chunks.
+- Merges MCP resource and template listing and defers Excel specialist tools.
+- Adds Claude prompt caching and message-thread fallback; retries a lost Responses reference.
+
+See [docs/releases/v1.1.8.md](docs/releases/v1.1.8.md).
+
 ## 1.1.7 — `rust-v1.1.7`
 
 - Adds call-site lines to Ontograph impact results.
