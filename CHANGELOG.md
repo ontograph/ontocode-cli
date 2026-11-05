@@ -4,6 +4,18 @@ Full release notes and downloadable assets are published on the
 [Ontocode releases page](https://github.com/ontograph/ontocode-cli/releases).
 Per-release notes are also kept under [docs/releases](docs/releases).
 
+## 1.1.9 — `rust-v1.1.9`
+
+- Adds bounded Excel `read_sheet_range`, `search_workbook`, and `query_sheet_rows` tools.
+- Reports oversized valid worksheets as resource-limited and tightens Excel coverage counts.
+- Adds per-task action budgets for builds and test runs in project plans.
+- Adds guarded manager-loop reopen and restores open sub-agents when a thread resumes.
+- Removes state-storage reads and lock-held I/O from the resume hot path.
+- Embeds source and build identity in release builds.
+- Consolidates base instructions.
+
+See [docs/releases/v1.1.9.md](docs/releases/v1.1.9.md).
+
 ## 1.1.8 — `rust-v1.1.8`
 
 - Starts sessions with full access and no approval prompts when nothing is selected; explicit settings and managed requirements still apply.
