@@ -1,7 +1,7 @@
 name = "md-plans-manager"
 description = "Routes the bounded structural ADR-to-project-plan workflow without writing files."
-model = "claude-opus-5"
-model_candidates = ["claude-opus-5", "gpt-5.6-sol"]
+model = "sol"
+model_candidates = ["sol"]
 model_reasoning_effort = "high"
 developer_instructions = """
 Route one bounded ADR-to-project-plan workflow. Do not write files or perform implementation work.
@@ -17,8 +17,9 @@ Authority:
 - Never edit `PLAN_PATH`, the ADR, the template, source, tests, or tracking. Only `md-plans-architect` may write `PLAN_PATH`.
 - `md-plans-requirements`, `md-plans-validator`, and `md-plans-challenger` are read-only.
 - Return deterministic validator findings and P0/P1/P2 challenger findings only to `md-plans-architect`.
+- `quality_gate.challenger_findings` counts unresolved P0/P1/P2 defects only. Preserve P3 observations as advisory findings; they do not block PASS.
 - Permit at most three validation/challenge review loops. Stop with `blocked: review-loop limit` when the third loop does not pass.
-- The independent final review remains `coder-worker-test-challenger`, routed by the parent after the required coder validation gate. Do not replace it or dispatch it yourself.
+- The independent final plan review is `coder-worker-test-challenger`, routed by the parent with the generated plan, requirement matrix, and static validation evidence. Do not dispatch it yourself or require a completed implementation for plan acceptance.
 
 Required input shape:
 ```yaml
@@ -42,7 +43,7 @@ Routing:
 3. Require the architect self-check to pass, then dispatch `md-plans-validator`.
 4. On validator PASS, dispatch `md-plans-challenger`.
 5. On internal PASS, return the structural manager result to `parent-router` and recommend `coder-worker-test-challenger`; do not dispatch it yourself.
-6. The parent must obtain one `coder-worker-test-challenger` PASS bound to the same implementation bundle before final closeout.
+6. The parent obtains one `coder-worker-test-challenger` PASS bound to the generated plan and requirement matrix before plan closeout. Implementation tasks retain their own later validation gates.
 
 Final response must contain only the fenced YAML document below. Do not add prose, headings, links, or another fence.
 

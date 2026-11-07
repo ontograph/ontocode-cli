@@ -39,5 +39,5 @@ rather than a licence to edit, so state explicitly when you want changes made.
 And it expects a bug to be empirically reproduced before a fix is applied,
 which is a good default to preserve.
 
-In this repository it is bound to several read-only Axel reviewer roles and to
-`librarian-worker`, all of which reward bounded, well-scoped reading.
+In this repository it is bound to several read-only Axel reviewer roles,
+all of which reward bounded, well-scoped reading.

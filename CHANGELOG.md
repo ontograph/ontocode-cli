@@ -4,6 +4,12 @@ Full release notes and downloadable assets are published on the
 [Ontocode releases page](https://github.com/ontograph/ontocode-cli/releases).
 Per-release notes are also kept under [docs/releases](docs/releases).
 
+## Content pack v10 — `content-pack-v10`
+
+- Removes the four librarian agents and the `ontocode-ontograph-km` skill; the pack now has 20 agents and 27 skills.
+
+See [docs/releases/content-pack-v10.md](docs/releases/content-pack-v10.md).
+
 ## 1.1.10 — `rust-v1.1.10`
 
 - Removes LineageRAG, Knowledge Modules, procedural projection and the `ontocode ontograph km` command; the `/ontograph` TUI command and your own KM data are kept.

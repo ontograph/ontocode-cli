@@ -11,10 +11,9 @@ using OntoIndex.
 - Do not redefine sub-agent role/model bindings here; use the active tracking
   file, task prompt, or `$ONTOCODE_HOME/agents/*.toml` role definitions as
   the authority for sub-agent dispatch.
-- When passing explicit `agent_type`, `model`, or `reasoning_effort` to
-  `spawn_agent`, do not use full-history forking: omit `fork_context` or set
-  `fork_context: false`. Full-history forked agents inherit those fields and
-  reject overrides.
+- When overriding agent type, model, or effort, disable history forking using
+  the active tool schema (`fork_turns: none` when offered). Full-history forks
+  inherit these fields and may reject overrides. Do not invent unsupported arguments.
 - `tool_search` metadata for `spawn_agent` is not dispatch capability by itself.
   If `spawn_agent` is not exposed as a callable tool, treat `dispatch_mode:
   sub-agent` as `blocked: capability unavailable`; for `dispatch_mode: human`,
@@ -37,6 +36,12 @@ using OntoIndex.
   or mutate tracking. Use `recommended_action`, `reason`, and `reopen_gate` as
   the legal next step. The typed `no-dispatch` write-handoff result remains a
   separate capability-mismatch path.
+- Reopen a terminal result only with the token its classification requires:
+  `dependency-cleared:<receipt>` for `blocked: dependency gate`, and
+  `fresh-evidence:<receipt>` for `needs-rework` only after the task scope
+  changed. When no coder-manager is open, dispatch runs bootstrap, which
+  rejects `resume_revision`; run `action=bootstrap` first, then dispatch with
+  the token.
 - Nested manager spawn depth-limit is parent-dispatch mode, not a task failure.
   If `spawn_agent` or `manager_loop_advance(action=dispatch)` returns
   `error_code: agent_depth_limit`, do not retry spawn or dispatch. Return
@@ -69,26 +74,76 @@ using OntoIndex.
   observe a completed child; cross-thread recovery is limited to
   capacity-flavored route failures.
 
+## Action Budgets And Recovery Evidence
+
+Apply the repository's declared execution budget to the whole task, including
+delegated work. Allocate child budgets from the parent allowance; parallelism,
+tool changes, compaction and repeated continuation messages do not reset it.
+Record each allocation before dispatch and reconcile actual usage from the
+child's execution evidence; never assume an interrupted child used nothing.
+
+- Record limits and used counts for builds, test runs, app launches and
+  measurement samples in existing task evidence, or conversation evidence when
+  there is no tracker. Count each started invocation, including failed runs;
+  a suite invocation counts as one test run and its samples are counted
+  separately. A launch-only receipt is enough to consume a launch. A confirmed
+  pre-execution rejection consumes no execution, but still records the failure.
+- Retain the returned action/job identity and terminal evidence. An uncertain
+  launch reserves its budget slot until reconciliation establishes whether it
+  started; do not create a replacement while that outcome remains unknown.
+- Read the relevant first failure before a retry. The same failure recurring
+  under unchanged preconditions requires a corrected cause, not another run.
+  For a patch with missing output, read the target or diff before retrying; a
+  second editor or tool does not make an unreconciled retry safe.
+- Exhaustion stops further budgeted execution. Record any proposed increase,
+  its reason and the explicit authorization before using it; retain original
+  limits, consumed counts and any overrun. New failing evidence can justify a
+  retry within remaining budget, but cannot expand the budget by itself.
+- After three consecutive recovery attempts with neither new evidence nor
+  observable progress, stop autonomous recovery, cite the stop condition and
+  concrete blocker, and state the exact reopening condition. Preserve recovery
+  counts across turns. A task making progress or awaiting a running child is
+  not a failed recovery attempt. Observations use the existing polling limit
+  and do not grant additional recovery attempts. Keep dependent work gated by
+  its prerequisite.
+- Keep this accounting in existing evidence; it introduces no parser fields or
+  runtime enforcement. Never hand-edit tool-owned attempts, leases, receipts,
+  task status or role results to record a budget amendment. If a runtime cap
+  also blocks execution, use its supported amendment path or report that exact
+  capability as unavailable. Exhaustion still permits reconciliation and
+  harvesting already-started work under existing wait and mailbox limits.
+
+## Artifact Acceptance
+
+- Match successful command claims to runtime receipts, then check the expected
+  result's content or behavior. Workspace input digests establish input
+  integrity; they do not establish generated-output correctness. A correct
+  no-op can pass without changed bytes when acceptance permits it.
+- Give each costly capture or measurement attempt a distinct evidence location
+  through the existing run owner. Preserve failed evidence; never overwrite a
+  previous attempt. Ordinary source reads do not require separate directories.
+- Cite figures from observed source evidence. Reuse across turns or agents is
+  allowed with the immutable artifact reference, content hash and extraction
+  method; reread mutable sources when freshness matters. Unsupported memory,
+  expected values and another agent's unsupported assertion are not evidence.
+- Package or test produced outputs only after harvesting the producer's
+  terminal success and confirming the expected artifact. Retain launch-only
+  results as pending execution evidence.
+- At closeout, report changed paths, executed validation with actual exit
+  codes, omitted checks and reasons, budget used versus declared, and any
+  loop-rule violation. Put these details inside the required role-result
+  envelope for roles that require one; do not append incompatible prose.
+
 ## Agent Addressing
 
-`spawn_agent` returns the only handle the agent tools accept: a UUID. Capture it
-at spawn time and pass exactly that value to `wait_agent`, `send_input`,
-`close_agent`, and `resume_agent`.
+Retain the handle returned by `spawn_agent` and use the active tool schema.
+Some interfaces require a UUID; others accept a canonical task path or relative
+task name. Use only the forms that interface documents. Never substitute a display
+nickname, internal lease ID, or template placeholder.
 
-These are display labels, not handles, and every one of them fails to parse:
-
-- the nickname shown in the environment context (for example `Noether`)
-- the `task_name` you supplied at spawn (for example `pilot_0545_copyrange`)
-- any internal identifier such as an `ml_<hash>` string
-- an uninterpolated template placeholder such as `{target}`
-
-The failure is `invalid agent id <value>: Error(ParseChar { .. })`. It means the
-string was not a UUID; it does not mean the agent is missing, dead, or busy. Do
-not retry with a second label or conclude anything about the agent's state.
-
-If you no longer hold the UUID, do not guess. Determine liveness from evidence
-the child leaves behind - its written artifacts, receipts, and file mtimes -
-and re-dispatch only when the packet is genuinely unclaimed.
+An invalid-handle error is an argument error, not evidence that the child died.
+Recover its handle from the spawn result or agent listing before another action;
+never redispatch while ownership of an existing child remains unresolved.
 
 ## Waiting
 
@@ -182,15 +237,31 @@ start, you finish.
 - Any edit after a validation command invalidates that command as completion
   evidence for the affected scope. After the final edit, rerun the smallest
   relevant checks before claiming completion or closing tracking.
-- At every terminal state (`wait`, `no_dispatch`, `complete`, `invalid_tracking`),
-  carry the iteration's reusable lesson forward as a bounded `knowledge_handoff`
-  entry in `evidence`: the lesson, the exact runtime signal that produced it, the
-  target skill file under `$ONTOCODE_HOME/skills/`, and the proposed delta. Blocked and
-  no-dispatch iterations carry the most reusable knowledge; do not restrict capture
-  to successful closeout.
-- Propose a `knowledge_handoff` delta only when the lesson is not already covered
-  by the target skill. Otherwise record `knowledge_handoff: none` and cite the
-  existing rule, so repeated blockers do not accumulate as near-duplicate entries.
+- Include a bounded `knowledge_handoff` only for a new reusable lesson not already
+  covered by the target skill. Name its runtime signal, target skill, and proposed
+  delta. Otherwise omit it; routine terminal states need no learning paperwork.
 - A `knowledge_handoff` is a proposal, not authority to write. Applying it to a
   skill file is parent/user-owned work and must not widen a read-only role's
   `changed_files`.
+
+## File-Scoped Fan-Out For Multi-File Tasks
+
+Use for changes spanning several files (cross-file API, config, or test
+coupling). Skip for single-file edits.
+
+1. Select scope with OntoIndex `impact`/`inspect/explore`: target files plus callers,
+   configuration and tests. Record it in the task as the write set.
+2. Give each file (or tightly coupled group) one bounded packet with a disjoint
+   write set. Editors may use the cheaper model; selection and diagnosis stay
+   on the stronger model.
+3. Each editor returns, besides its change, a short list of neighbor requests
+   (`<path>: what changed; what to update/check`). A request never widens the
+   recipient's write set; the manager routes it as a new packet. Record
+   pending requests in the recipient task's optional `neighbor_requests` list
+   (inline entries must not contain commas). It is routing data only and does
+   not change the task scope hash.
+4. Run the repository validation, then diagnose with `validation-diagnosis`
+   (per-file recommendations).
+5. Re-select scope from that diagnosis for the next round. At most three
+   rounds after the first attempt unless the task declares another limit; count
+   them in the tracker. Stop on repeated unchanged failure.

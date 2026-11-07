@@ -28,13 +28,13 @@ Content Pack v9 includes 25 agents and 28 skills. Install it into Ontocode home
 with:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/ontograph/ontocode-cli/main/scripts/install/install-content-pack.sh | sh -s -- --release content-pack-v9 --scope home
+curl -fsSL https://raw.githubusercontent.com/ontograph/ontocode-cli/main/scripts/install/install-content-pack.sh | sh -s -- --release content-pack-v10 --scope home
 ```
 
 For a trusted project-local installation, use:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/ontograph/ontocode-cli/main/scripts/install/install-content-pack.sh | sh -s -- --release content-pack-v9 --scope project --directory /path/to/repo
+curl -fsSL https://raw.githubusercontent.com/ontograph/ontocode-cli/main/scripts/install/install-content-pack.sh | sh -s -- --release content-pack-v10 --scope project --directory /path/to/repo
 ```
 
 The installer verifies the archive against the release `SHA256SUMS` and refuses

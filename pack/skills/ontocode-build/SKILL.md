@@ -116,17 +116,23 @@ Order of preference:
 1. `just compiler-lane-detached <unique-job-name> <command>` for compiler work
    the active manager has assigned. Receipts survive transport failure, so
    resume with `just lane-result <job-name>` rather than relaunching.
-2. `just lane-result <job-name>` for a deterministic, read-only receipt harvest.
+2. `just lane-result <job-name> --wait 60` for a bounded, read-only receipt harvest.
    It validates the managed artifact metadata and terminal `result.json`, then
    returns the exit code, elapsed time, and a bounded `output.log` tail. It never
-   launches, changes, or deletes a job. Use it once the receipt exists; an
-   incomplete receipt is a terminal evidence failure, not a reason to relaunch.
-3. `run_in_background: true` on `ctx_shell` for other long commands. Keep the
-   returned `job_id` and harvest with `background_action: "status"`.
+   launches, changes, or deletes a job. On Linux the wait uses a pidfd and
+   validates the recorded process identity. The wait accepts 0 through 60 seconds.
+   Reader exit 3 means the same worker is still running; retain its identity and
+   do disjoint work before another required observation. Exit 2 means invalid
+   receipt evidence; diagnose it without relaunching. Exit 0 means the terminal
+   receipt was read; inspect its nested exit_code for the command outcome.
+   Use bounded waits instead of polling; retain the shared observation budget.
+3. Use the available native command runner's background or session mechanism
+   for other long commands. Retain the returned job or session identifier and
+   harvest terminal output through that runner's wait or status operation.
 
 Harvest or cancel every job you start. A started job whose result is never read
 is wasted compute and an unproven claim; if it is no longer needed, cancel it
-with `background_action: "cancel"` rather than abandoning it. Do not launch a
+through its owning runner's cancellation operation. Do not launch a
 replacement for a job you have not harvested.
 
 `nohup`, `&`, and hand-rolled PID files reproduce the detached lane without its

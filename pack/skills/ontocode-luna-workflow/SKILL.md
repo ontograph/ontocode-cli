@@ -6,11 +6,16 @@ description: Regular-chat Luna delegation workflow for bounded implementation ta
 # Regular-Chat Luna Workflow
 
 Use this workflow only when the user has authorized sub-agent delegation. It
-does not replace the registered coder, librarian, or md-plans chains.
+does not replace the registered coder or md-plans chains.
 
 1. Resolve the intended behavior and existing owner locally. Check OntoIndex
    freshness, locate the owner and test surface, verify exact source, and run
    impact analysis for symbols that may change.
+   Retrieve task-relevant context through OntoIndex, then use available native
+   file-read and search tools for exact source. Expand through demonstrated callers,
+   configuration and tests until the packet is bounded; record unresolved
+   dependencies rather than loading the entire project. Use function, module
+   or evidence-family ownership when a single file is an unsuitable unit.
 2. Use one read-only `explorer` only when owner files, target symbols, the
    existing helper to reuse, or the focused validation command remain unknown.
    The explorer must return those facts without editing or building.
@@ -38,6 +43,17 @@ does not replace the registered coder, librarian, or md-plans chains.
    useful work with a disjoint write set. Never dispatch overlapping workers.
 6. Review Luna's changed files and claimed validation, run final scoped
    verification locally, then close the child agent.
+
+## Validation Follow-Up
+
+Use the installed `validation-diagnosis` skill when a check fails or its
+acceptance is partial or conflicting. Record the failure evidence, responsible
+owner, remaining correction rounds and permitted next action in the existing
+receipt or tracker. Dispatch a decided correction only after ownership and
+scope are resolved. Send affected neighbors a dependency citation and exact
+requested update/check; messages do not expand their write sets. Reactivate
+only implicated owners within the repository's concurrency and model policy.
+Preserve authenticated gates and separately scoped acquisition limits.
 
 Skip `explorer` when the target and behavior are already known. Keep work local
 when discovery blocks the immediate next action, the write set cannot be made

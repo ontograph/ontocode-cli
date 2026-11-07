@@ -1,9 +1,9 @@
 schema_version = 1
 name = "ontocode-agents-and-skills"
-version = "9"
+version = "10"
 license = "Apache-2.0"
-source_commit = "d102172e7c199ca79bb1af884963455e5394feb9"
-repository_source_commit = "d102172e7c199ca79bb1af884963455e5394feb9"
+source_commit = "08a31fd53c4c0a69614bcf1f10f8c06cc008626c"
+repository_source_commit = "08a31fd53c4c0a69614bcf1f10f8c06cc008626c"
 definitions_source = "external-definitions-root"
 
 [[skills]]
@@ -100,12 +100,6 @@ license = "Apache-2.0"
 name = "ontocode-memory-bank"
 source = "skills/ontocode-memory-bank"
 destination = "skills/ontocode-memory-bank"
-license = "Apache-2.0"
-
-[[skills]]
-name = "ontocode-ontograph-km"
-source = "skills/ontocode-ontograph-km"
-destination = "skills/ontocode-ontograph-km"
 license = "Apache-2.0"
 
 [[skills]]
@@ -229,12 +223,6 @@ destination = "agents/cdr-debug.toml"
 license = "Apache-2.0"
 
 [[agents]]
-name = "cdr-manager"
-source = "agents/cdr-manager.toml"
-destination = "agents/cdr-manager.toml"
-license = "Apache-2.0"
-
-[[agents]]
 name = "cdr-performance"
 source = "agents/cdr-performance.toml"
 destination = "agents/cdr-performance.toml"
@@ -268,30 +256,6 @@ license = "Apache-2.0"
 name = "council-panelist"
 source = "agents/council-panelist.toml"
 destination = "agents/council-panelist.toml"
-license = "Apache-2.0"
-
-[[agents]]
-name = "librarian"
-source = "agents/librarian.toml"
-destination = "agents/librarian.toml"
-license = "Apache-2.0"
-
-[[agents]]
-name = "librarian-manager"
-source = "agents/librarian-manager.toml"
-destination = "agents/librarian-manager.toml"
-license = "Apache-2.0"
-
-[[agents]]
-name = "librarian-reviewer"
-source = "agents/librarian-reviewer.toml"
-destination = "agents/librarian-reviewer.toml"
-license = "Apache-2.0"
-
-[[agents]]
-name = "librarian-worker"
-source = "agents/librarian-worker.toml"
-destination = "agents/librarian-worker.toml"
 license = "Apache-2.0"
 
 [[agents]]

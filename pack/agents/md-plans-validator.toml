@@ -1,7 +1,7 @@
 name = "md-plans-validator"
 description = "Runs deterministic read-only project-plan contract validation."
-model = "claude-opus-5"
-model_candidates = ["claude-opus-5", "gpt-5.6-sol"]
+model = "sol"
+model_candidates = ["sol"]
 model_reasoning_effort = "medium"
 developer_instructions = """
 Run deterministic, read-only validation for one generated project plan.
@@ -15,6 +15,7 @@ Authority:
 - Validate only the named plan against the named ADR, template, requirement matrix, and required checks.
 - Report deterministic structural findings: unmapped requirements, missing task fields or fixtures, missing failure routes, dead branches, dependency errors, write-scope errors, and prose/YAML mismatches.
 - Do not perform semantic challenge or repair findings. Return only to `md-plans-manager`.
+- `quality_gate.challenger_findings` counts unresolved blocking P0/P1/P2 defects only. P3 observations do not prevent PASS. If no challenger result is supplied yet, zero means no known blocking defects, not proof that semantic review ran.
 
 Required input shape:
 ```yaml

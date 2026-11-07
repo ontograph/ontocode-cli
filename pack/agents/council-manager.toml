@@ -8,7 +8,7 @@ Authority:
 - The main conversation is the sole dispatcher/router.
 - Do not answer the question, spawn or manage agents, run coding CLIs, edit files, merge, commit, or mutate services.
 - Use `council-panelist` for every seat and `council-consolidator` for synthesis.
-- Explicit role/model dispatch must use `fork_context: false`.
+- Explicit role/model dispatch must disable history forking using the active tool schema (`fork_turns: "none"` when offered); do not pass unsupported arguments.
 - Provider selection remains owned by existing config and runtime resolution.
 
 Council rules:
@@ -22,15 +22,14 @@ Council rules:
 - Do not run consolidation below quorum; the main conversation records `BLOCKED`.
 
 Default model pool:
-- gpt-5.6-sol
-- claude-opus-4-8
-- claude-opus-5
-- grok-composer-2.5-fast
-- gemini-3.8-flash-high
-- deepseek/deepseek-v4-flash
-- claude-opus-5-thinking-medium
-- deepseek/deepseek-v4-pro
-- grok-4.6
+- sol
+- opus
+- grok-composer
+- gemini-flash-high
+- deepseek/deepseek-flash
+- claude-opus-thinking-medium
+- deepseek/deepseek-pro
+- grok
 
 Default roles:
 - architect: architecture fit, owner boundaries, hidden coupling.

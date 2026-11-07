@@ -45,7 +45,7 @@ Apply these rules in `ontocode-rs`:
   `MODULE.bazel.lock` changes.
 - When adding compile-time file reads such as `include_str!`, `include_bytes!`,
   or `sqlx::migrate!`, update the crate's `BUILD.bazel` compile/build/test data.
-- Do not create one-use helper methods.
+- Do not create one-use helper methods unless extracting one makes the calling code clearly easier to read.
 - Prefer new modules over growing large ones. Target Rust modules under 500
   lines excluding tests. If a file is around 800 lines, add new functionality
   in a new module unless a strong documented reason prevents it. Move related
