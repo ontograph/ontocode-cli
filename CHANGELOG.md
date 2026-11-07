@@ -4,6 +4,17 @@ Full release notes and downloadable assets are published on the
 [Ontocode releases page](https://github.com/ontograph/ontocode-cli/releases).
 Per-release notes are also kept under [docs/releases](docs/releases).
 
+## 1.1.10 — `rust-v1.1.10`
+
+- Removes LineageRAG, Knowledge Modules, procedural projection and the `ontocode ontograph km` command; the `/ontograph` TUI command and your own KM data are kept.
+- Retires the `[ontograph]` config table and the `agent_authored_project_knowledge`, `lineage_routing` and `lineage_shadow` flags; old configs and lockfiles still load and replay.
+- Fixes config-lock replay for lockfiles that carry retired feature keys.
+- Accepts namespaced tool-call history in the native Anthropic, Copilot and Gemini adapters.
+- Stops reporting current Ontograph tool failures as the removed KM area in session diagnostics.
+- Reduces copying and rescans in turn diffs, executor output, models cache renewal, config merging and thread lookup.
+
+See [docs/releases/v1.1.10.md](docs/releases/v1.1.10.md).
+
 ## 1.1.9 — `rust-v1.1.9`
 
 - Adds bounded Excel `read_sheet_range`, `search_workbook`, and `query_sheet_rows` tools.
