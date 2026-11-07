@@ -4,9 +4,12 @@ Full release notes and downloadable assets are published on the
 [Ontocode releases page](https://github.com/ontograph/ontocode-cli/releases).
 Per-release notes are also kept under [docs/releases](docs/releases).
 
-## Unreleased
+## 1.1.11 — `rust-v1.1.11`
 
-- Removes the librarian chain from the runtime: sub-agent artifact receipts, evidence requirements and `km-curation` routing. Retired librarian role names are rejected; old state databases still open. Not in 1.1.10; ships with the next CLI release.
+- Removes the librarian chain from the runtime: sub-agent artifact receipts, evidence requirements and `km-curation` routing. Retired librarian role names are rejected; old state databases still open.
+- No other behavior changes.
+
+See [docs/releases/v1.1.11.md](docs/releases/v1.1.11.md).
 
 ## Content pack v10 — `content-pack-v10`
 
