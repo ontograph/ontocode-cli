@@ -4,6 +4,10 @@ Full release notes and downloadable assets are published on the
 [Ontocode releases page](https://github.com/ontograph/ontocode-cli/releases).
 Per-release notes are also kept under [docs/releases](docs/releases).
 
+## Unreleased
+
+- Removes the librarian chain from the runtime: sub-agent artifact receipts, evidence requirements and `km-curation` routing. Retired librarian role names are rejected; old state databases still open. Not in 1.1.10; ships with the next CLI release.
+
 ## Content pack v10 — `content-pack-v10`
 
 - Removes the four librarian agents and the `ontocode-ontograph-km` skill; the pack now has 20 agents and 27 skills.
