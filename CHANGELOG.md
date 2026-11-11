@@ -4,6 +4,15 @@ Full release notes and downloadable assets are published on the
 [Ontocode releases page](https://github.com/ontograph/ontocode-cli/releases).
 Per-release notes are also kept under [docs/releases](docs/releases).
 
+## 2.1.1 — `rust-v2.1.1`
+
+- Resumed threads restore their pending manager-loop waits, and a suspended wait is re-registered when its observation fingerprint changes.
+- `manager_loop_advance` `reopen` can replace an active `IMPLEMENTED_PENDING_VALIDATION` task when the manager runs with `dispatch_mode: none`.
+- The default base instructions and Claude Fable persona files are revised. This prompt change has not passed the scaffold-evaluation gate and ships unevaluated.
+- Memdoor reliability measurement is incomplete; the release makes no token or latency savings claim.
+
+See [docs/releases/v2.1.1.md](docs/releases/v2.1.1.md).
+
 ## 1.1.11 — `rust-v1.1.11`
 
 - Removes the librarian chain from the runtime: sub-agent artifact receipts, evidence requirements and `km-curation` routing. Retired librarian role names are rejected; old state databases still open.
