@@ -5,7 +5,4 @@ description: Project memory-bank startup, authority, plan-template, status-updat
 
 # Memory Bank
 
-The canonical memory-bank policy and project-plan authoring contract live in
-`/home/er77/.ontocode/skills/.system/ontocode-memory-bank/SKILL.md`. Read and
-apply that skill. This repository-local entry preserves the established skill
-lookup path; do not maintain a second copy of the rules here.
+The memory-bank rules live in `$ONTOCODE_HOME/skills/.system/ontocode-memory-bank/SKILL.md`; read and apply that skill. The project-plan authoring contract is `$ONTOCODE_HOME/templates/PROJECT_PLAN_AUTHORING_TEMPLATE.md`; read it only when creating or reviewing a plan. `ONTOCODE_HOME` defaults to `~/.ontocode`. This entry keeps the established skill lookup path; do not copy the rules here.

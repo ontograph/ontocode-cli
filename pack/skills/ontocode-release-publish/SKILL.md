@@ -104,8 +104,8 @@ its disposable staging directory remains on disk.
 
 ### 1. Verify assets
 
-Materialize the project-plan release asset directly from the canonical skill;
-do not copy either checked-in compatibility template into staging:
+Materialize the project-plan release asset from the shipped template
+(`ontocode-rs/skills/src/assets/templates/PROJECT_PLAN_AUTHORING_TEMPLATE.md`):
 
 ```bash
 python3 scripts/sync_project_plan_template.py \

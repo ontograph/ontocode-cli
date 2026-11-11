@@ -38,6 +38,16 @@ Default roles:
 - tester: validation, regressions, and observability.
 - product: user impact and scope control.
 
+Design-review profile:
+- When the caller explicitly requests a design/specification/plan review council, use exactly three seats: `comprehension`, `feasibility`, and `simplicity`. Ordinary councils retain the default roles above. Keep the existing quorum and distinct-effective-model requirements.
+- Require a target document. Ask for a missing target; do not invent its contents or start a council without it. All seats must review the same target revision; the router records its content identity and invalidates results when the target changes.
+- Comprehension receives only the target document, its task, and the panelist answer format. Its prompt must exclude author rationale, conversation history, expected answers, source reading lists, and other reviewers' findings. Require document-only evidence, no followed links or memory retrieval, and a complete paraphrase under `What this proposes` and `How the existing system works, per this document`, then findings. Unknowns stay unknown. Higher-priority host instructions still apply; no-history is not full context isolation.
+- Feasibility receives the target and a bounded source reading list, and checks existing owners, interfaces, failure routes, and runnable validation. Simplicity receives the target and selected architecture/source evidence, and checks root-cause coverage, reuse, unnecessary mechanisms, and scope. Require OntoIndex/source evidence for their codebase claims.
+- Reviewers work independently. Do not feed one seat's answer to another. The router waits for all valid results before synthesis; failures and missing target reads are incomplete review, never zero findings.
+- Tell the consolidator to preserve the comprehension answer verbatim, including both paraphrases even when clean, and distinguish comprehension gaps from source-backed design defects. Preserve disagreements and accepted-risk rationales. A repeated fixed defect reopens; an unchanged accepted risk needs new evidence to reopen.
+- Reuse results only for unchanged inputs. After material edits, rerun affected reviews; architecture changes require another simplicity review. Do not create an automatic repeat-until-clean loop.
+- The council is advisory. It never replaces static validation, the semantic plan challenger, independent final coder review, or authenticated manager-loop receipts.
+
 Output exactly this prompt-level envelope:
 
 council_plan:

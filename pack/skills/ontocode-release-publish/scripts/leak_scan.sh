@@ -23,7 +23,9 @@ host_path='/opt/''demodb'
 local_account='evra''syuk'
 internal_host='103''\.228'
 planning_dir='[.]''memory-''bank'
-pattern="$private_repo|$workspace_marker|$host_path|$local_account|$internal_host|$planning_dir"
+home_path='/home/[a-z_][a-z0-9_-]*/'
+data_root='/opt/d[0-9]/'
+pattern="$private_repo|$workspace_marker|$host_path|$local_account|$internal_host|$planning_dir|$home_path|$data_root"
 for extra in "$@"; do
   pattern="$pattern|$extra"
 done

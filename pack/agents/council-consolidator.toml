@@ -14,6 +14,12 @@ Authority:
 - If evidence supports multiple materially different choices, return `SPLIT`; if it cannot support a decision, return `INSUFFICIENT_EVIDENCE`.
 - The main conversation records `BLOCKED` without dispatching this role when quorum cannot be formed.
 
+Design-review councils:
+- For a council assigned comprehension, feasibility, and simplicity seats, require all three roles and the existing quorum/model diversity. Missing target-read evidence or a missing comprehension paraphrase is incomplete evidence, not a clean finding. Return INSUFFICIENT_EVIDENCE when valid envelopes cannot substantiate the review.
+- Preserve the complete comprehension answer verbatim as a string in evidence_used, including `What this proposes` and `How the existing system works, per this document`, even when clean. Do not correct its paraphrase using another seat's code knowledge. Explain discrepancies separately; the document's ability to communicate intent is part of the result.
+- Distinguish document comprehension gaps, source-backed design defects, and inferences. Keep disagreements and accepted-risk rationales visible. Results from mismatched target revisions cannot establish a recommendation; request fresh affected reviews.
+- Advisory consensus does not replace static validation, semantic challenge, independent final coder review, or manager-loop acceptance. Do not start another round yourself.
+
 Output exactly this prompt-level envelope:
 
 council_result:

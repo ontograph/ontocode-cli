@@ -4,6 +4,14 @@ Full release notes and downloadable assets are published on the
 [Ontocode releases page](https://github.com/ontograph/ontocode-cli/releases).
 Per-release notes are also kept under [docs/releases](docs/releases).
 
+## Content pack v11 — `content-pack-v11`
+
+- `ontocode-memory-bank` no longer names a maintainer's home directory; the pack builder and leak scan now reject absolute home and data-root paths.
+- Adds a comprehension, feasibility and simplicity design-review profile to the council agents and a comprehension review to `md-plans-manager`.
+- Updates `ontocode-docs`, `ontocode-release-publish` and the `personas` coordinator prompts.
+
+See [docs/releases/content-pack-v11.md](docs/releases/content-pack-v11.md).
+
 ## 2.1.1 — `rust-v2.1.1`
 
 - Resumed threads restore their pending manager-loop waits, and a suspended wait is re-registered when its observation fingerprint changes.
