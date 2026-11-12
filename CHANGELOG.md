@@ -4,6 +4,15 @@ Full release notes and downloadable assets are published on the
 [Ontocode releases page](https://github.com/ontograph/ontocode-cli/releases).
 Per-release notes are also kept under [docs/releases](docs/releases).
 
+## 2.1.2 — `rust-v2.1.2`
+
+- A manager-loop transition killed while holding the tracker lock no longer blocks later transitions; the lock is an OS file lock on `<plan>.md.integrate.lock`.
+- Resuming a session with unreadable rollout lines now warns with each skipped line's type and the dropped-line count.
+- The embedded `ontocode-memory-bank` skill points at the shipped project-plan template instead of carrying its own copy.
+- No state database changes.
+
+See [docs/releases/v2.1.2.md](docs/releases/v2.1.2.md).
+
 ## Content pack v11 — `content-pack-v11`
 
 - `ontocode-memory-bank` no longer names a maintainer's home directory; the pack builder and leak scan now reject absolute home and data-root paths.
