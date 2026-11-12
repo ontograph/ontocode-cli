@@ -4,6 +4,14 @@ Full release notes and downloadable assets are published on the
 [Ontocode releases page](https://github.com/ontograph/ontocode-cli/releases).
 Per-release notes are also kept under [docs/releases](docs/releases).
 
+## 2.1.3 — `rust-v2.1.3`
+
+- Loading repository policy before tool execution no longer consumes the repeated-failure redirect; actual execution failures retain the existing behavior.
+- Existing configuration and state databases remain compatible.
+- Content pack v11 remains the current independently versioned pack.
+
+See [docs/releases/v2.1.3.md](docs/releases/v2.1.3.md).
+
 ## 2.1.2 — `rust-v2.1.2`
 
 - A manager-loop transition killed while holding the tracker lock no longer blocks later transitions; the lock is an OS file lock on `<plan>.md.integrate.lock`.
