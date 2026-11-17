@@ -4,6 +4,14 @@ Full release notes and downloadable assets are published on the
 [Ontocode releases page](https://github.com/ontograph/ontocode-cli/releases).
 Per-release notes are also kept under [docs/releases](docs/releases).
 
+## 2.1.4 — `rust-v2.1.4`
+
+- Fixes rejected developer messages for `qwen-qwen-4` on the configured `cliproxyapi` provider by sending those messages with the system role.
+- Preserves message contents, metadata, ordering, and request-history validation. Other models and providers retain their existing behavior.
+- Existing configuration and state databases remain compatible. Content pack v11 remains separately versioned.
+
+See [docs/releases/v2.1.4.md](docs/releases/v2.1.4.md).
+
 ## 2.1.3 — `rust-v2.1.3`
 
 - Loading repository policy before tool execution no longer consumes the repeated-failure redirect; actual execution failures retain the existing behavior.
