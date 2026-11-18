@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.1.6 - 2026-11-18
+
+- Fixes catalog decoding when a provider advertises unsupported input modalities such as audio.
+- Adds catalog and endpoint regression coverage and simplifies the project-plan template.
+- Ships the Linux x86_64 binary, installers, template, and checksums. Content pack v11 remains unchanged.
+
+See [docs/releases/v2.1.6.md](docs/releases/v2.1.6.md).
+
 ## 2.1.5 - 2026-11-18
 
 - Refreshes empty inherited model catalogs before sub-agent validation.
