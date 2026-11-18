@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.1.5 - 2026-11-18
+
+- Refreshes empty inherited model catalogs before sub-agent validation.
+- Includes provider catalog, MCP configuration, and tool-discovery updates.
+- Ships the Linux x86_64 binary, installers, project-plan template, and checksums. Content pack v11 remains unchanged.
+
 Full release notes and downloadable assets are published on the
 [Ontocode releases page](https://github.com/ontograph/ontocode-cli/releases).
 Per-release notes are also kept under [docs/releases](docs/releases).
