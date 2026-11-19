@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.1.7 - 2026-11-19
+
+- Opens `/model` from the current catalog and refreshes it in the background for the next opening.
+- Lists visible CLIProxyAPI aliases, including Qwen aliases, even when the gateway omits the API-support flag.
+- Ships the Linux x86_64 binary, installers, template, and checksums. Content pack v11 is unchanged.
+
+See the [2.1.7 release notes](docs/releases/v2.1.7.md).
+
 ## 2.1.6 - 2026-11-18
 
 - Fixes catalog decoding when a provider advertises unsupported input modalities such as audio.
