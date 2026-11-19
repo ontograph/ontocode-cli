@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.1.8 - 2026-11-19
+
+- Directs main sessions to coordinate delegated work and prefer an eligible DeepSeek model with high reasoning for sub-agents.
+- Requires model requests to use the configured runtime transport and tells agents to proceed when only optional or duplicate paperwork remains.
+- Ships an unsigned Linux x86_64 binary, installers, the project-plan template, and SHA-256 checksums. Content pack v11 remains separately versioned.
+
+See the [2.1.8 release notes](docs/releases/v2.1.8.md).
+
 ## 2.1.7 - 2026-11-19
 
 - Opens `/model` from the current catalog and refreshes it in the background for the next opening.
