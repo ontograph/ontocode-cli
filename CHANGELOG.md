@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.1.9 - 2026-11-23
+
+- Lists every provider model in `/model`, including entries the catalog marks as not API-supported, so gateways that omit that flag no longer hide models.
+- Adds task validation claims and durable per-task action-budget reservations, with validation job tracking that survives retries and concurrent workers.
+- Records session outcomes for memory, bounds optional developer context while protecting required sections, and gives compaction trigger and target policy a single owner.
+- Extends Ontograph indexing and retrieval evidence, skill-corpus search fixtures, and detached compiler-lane and session-analysis tooling.
+- Ships an unsigned Linux x86_64 binary, installers, the project-plan template, and SHA-256 checksums. Content pack v11 remains separately versioned.
+
+See the [2.1.9 release notes](docs/releases/v2.1.9.md).
+
 ## 2.1.8 - 2026-11-19
 
 - Directs main sessions to coordinate delegated work and prefer an eligible DeepSeek model with high reasoning for sub-agents.
