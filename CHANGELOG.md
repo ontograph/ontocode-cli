@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.1.10 - 2026-11-23
+
+- Fixes CDR physical spawns so they receive the coder contract used for runtime validation.
+- Reports an unavailable manager role through the typed no-dispatch path.
+- Applies the CLIProxyAPI system-role compatibility rule to the full DeepSeek model family.
+- Retries empty proxy keepalive responses that incorrectly report an output-token limit.
+
+See the [2.1.10 release notes](docs/releases/v2.1.10.md).
+
 ## 2.1.9 - 2026-11-23
 
 - Lists every provider model in `/model`, including entries the catalog marks as not API-supported, so gateways that omit that flag no longer hide models.
