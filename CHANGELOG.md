@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.1.11 - 2026-11-24
+
+- Synthesizes `reasoning_text` from summary items so DeepSeek reasoning replay works on OpenAI-compatible gateways that omit reasoning deltas.
+- Applies the CLIProxyAPI settings to the full DeepSeek model family, matching gateway-side family defaults instead of exact model IDs.
+
+See the [2.1.11 release notes](docs/releases/v2.1.11.md).
+
 ## 2.1.10 - 2026-11-23
 
 - Fixes CDR physical spawns so they receive the coder contract used for runtime validation.
